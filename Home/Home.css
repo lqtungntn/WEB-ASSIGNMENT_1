@@ -1,3 +1,7 @@
+body {
+  background-color: #f1faee;
+  background-repeat: repeat-x;
+}
 .navbar {
   background-color: #1d3557;
 }
