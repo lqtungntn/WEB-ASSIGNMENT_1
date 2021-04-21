@@ -155,6 +155,12 @@
     cursor: pointer;
     padding: 10px;
     font-size: 18px;
+    transition: all 0.5s ease;
+}
+
+.contactForm .inputBox input[type="submit"]:hover{
+    color: red;
+    background-color: pink;
 }
 
 @media (max-width: 991px){
@@ -170,4 +176,157 @@
     .container .contactInfo, .contactForm, .contactConnect{
         width: 100%;
     }
+}
+
+/*--------------------------------FOOTER---------------------------------------------------*/
+
+#footer {
+    background-color: #1c1c1c;
+}
+  
+#footer .footer-top{
+    color: #8A92A2;
+    text-align: center;
+    padding: 30px 80px;
+}
+
+#footer .footer-top h4{
+    font-size: 18px;
+}
+
+#footer .footer-top .footer-phone{
+    display: inline-block;
+    padding-top: 15px;
+    font-size: 32px;
+}
+
+#footer .footer-top p{
+    padding: 10px 0;
+}
+
+#footer .footer-top ul{
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+}
+
+#footer .footer-top ul li{
+    flex: 50%;
+    text-align: center;
+    transition: all .5s;
+}
+
+#footer .footer-top ul .icon-fa > i{
+    background-color: #34a853;
+    color: #fff;
+    font-size: 23px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+#footer .footer-top ul .icon-fa > a{
+    color: #34a853;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+#footer .footer-top ul .icon-fa > span.info-name{
+    display: block;
+    color: #969696;
+    font-size: 15px;
+}
+
+#footer .footer-info{
+    display: flex;
+} 
+
+#footer .footer-info .footer-sec{
+    flex: 33%;
+    margin-left: 100px;
+}
+
+#footer .footer-info .footer-sec ul{
+    list-style-type: none;
+}
+
+#footer .footer-info .footer-sec h2{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+#footer .footer-info .footer-sec h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+#footer .footer-info .footer-sec ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+#footer .footer-info .footer-sec ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+#footer .footer-info .footer-sec ul li a:hover{
+    color: blue;
+    padding-left: 10px;
+}
+
+#footer .footer-info .footer-sec .social-link a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color:blue;
+    margin: 20px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+#footer .footer-info .footer-sec .social-link a:hover{
+    color: red;
+    background-color: pink;
+}
+
+#footer .footer-info .footer-sec .info nav a{
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+#footer .footer-info .footer-sec .info nav a:hover{
+    color: blue;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+#footer .footer-info .footer-sec .info nav a i{
+    color: #ffffff;
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    font-size: 20px;
 }
