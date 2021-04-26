@@ -158,12 +158,99 @@
   transition: all 0.5s ease;
 }
 
-.contactForm .inputBox input[type="submit"]:hover {
-  color: red;
-  background-color: pink;
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
 }
 
-@media (max-width: 991px) {
+/*-----------------------------------------------Effect Button--------------------------------*/
+
+.contactForm .effect-submit a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #8ad671;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+  font-weight: 700;
+}
+
+.contactForm .effect-submit a:hover {
+  color: #120203;
+  background: #8ad671;
+  box-shadow: 0 0 10px #34a853, 0 0 40px #34a853, 0 0 80px #34a853;
+  transition-delay: 1s;
+}
+
+.contactForm .effect-submit a span {
+  position: absolute;
+  display: block;
+}
+
+.contactForm .effect-submit a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #34a853);
+}
+
+.contactForm .effect-submit a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.contactForm .effect-submit a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #34a853);
+}
+
+.contactForm .effect-submit a:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.contactForm .effect-submit a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #34a853);
+}
+
+.contactForm .effect-submit a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.contactForm .effect-submit a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #34a853);
+}
+
+.contactForm .effect-submit a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+@media (max-width: 1199px) {
   .contact {
     padding: 50px;
   }
@@ -181,6 +268,7 @@
 }
 
 /*--------------------------------FOOTER---------------------------------------------------*/
+/*--------------------------------FOOTER - TOP---------------------------------------------------*/
 
 #footer {
   background-color: #1c1c1c;
@@ -228,12 +316,18 @@
   line-height: 40px;
   margin-bottom: 10px;
   border-radius: 50%;
+  transition: 0.5s;
 }
 
 #footer .footer-top ul .icon-fa > a {
   color: #34a853;
   text-decoration: none;
   font-size: 25px;
+  transition: 0.5s;
+}
+
+#footer .footer-top ul .icon-fa > a:hover {
+  color: #3767a9;
 }
 
 #footer .footer-top ul .icon-fa > span.info-name {
@@ -241,6 +335,32 @@
   color: #969696;
   font-size: 15px;
 }
+
+@media only screen and (max-width: 767px) {
+  #footer .footer-top {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+  #footer .footer-top ul {
+    flex-direction: column;
+  }
+  #footer .footer-top ul .icon-fa > a,
+  #footer .footer-top ul .icon-fa > span.info-name {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  #footer .footer-top ul .icon-fa > i {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/*--------------------------------FOOTER - INFO---------------------------------------------------*/
 
 #footer .footer-info {
   display: flex;
@@ -253,6 +373,7 @@
 
 #footer .footer-info .footer-sec ul {
   list-style-type: none;
+  position: relative;
 }
 
 #footer .footer-info .footer-sec h2 {
@@ -275,42 +396,100 @@
   width: 50px;
 }
 
+/*Hover Effect ---- Footer Info*/
+
 #footer .footer-info .footer-sec ul li:not(:last-child) {
   margin-bottom: 10px;
 }
 
-#footer .footer-info .footer-sec ul li a {
+#footer .footer-info .footer-sec ul li {
+  position: relative;
+  left: 0;
+  color: white;
+  margin: 4px 0;
+  list-style: none;
+  border-left: 2px solid #4b86aa;
+  transition: 0.5s;
+  cursor: pointer;
   text-decoration: none;
-  font-size: 16px;
-  text-transform: capitalize;
-  color: #ffffff;
-  font-weight: 300;
-  color: #bbbbbb;
-  display: block;
-  transition: all 0.3s ease;
 }
 
-#footer .footer-info .footer-sec ul li a:hover {
-  color: blue;
-  padding-left: 10px;
+#footer .footer-info .footer-sec ul li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #4b86aa;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s;
 }
+
+#footer .footer-info .footer-sec ul li:hover {
+  left: 10px;
+}
+
+#footer .footer-info .footer-sec ul li a {
+  position: relative;
+  padding: 8px;
+  display: inline-block;
+  z-index: 1;
+  transition: 0.5s;
+  text-decoration: none;
+  color: white;
+}
+
+#footer .footer-info .footer-sec ul li:hover a {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#footer .footer-info .footer-sec ul li:hover::before {
+  transform: scaleX(0.8);
+}
+
+/*Hover Effect ---- Footer Info Social link */
 
 #footer .footer-info .footer-sec .social-link a {
   display: inline-block;
   height: 40px;
   width: 40px;
-  background-color: blue;
+  font-size: 20px;
   margin: 20px;
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
-  color: #ffffff;
-  transition: all 0.5s ease;
+  color: #3767a9;
+  transition: 0.4s linear;
+}
+
+#footer .footer-info .footer-sec .social-link a::before,
+#footer .footer-info .footer-sec .social-link a::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: 0.4s linear;
 }
 
 #footer .footer-info .footer-sec .social-link a:hover {
-  color: red;
-  background-color: pink;
+  transform: scale(0.8);
+}
+
+#footer .footer-info .footer-sec .social-link a:hover::before {
+  border-left: 4px solid;
+  border-right: 4px solid;
+  transform: skewX(20deg);
+}
+
+#footer .footer-info .footer-sec .social-link a:hover::after {
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  transform: skewY(-20deg);
 }
 
 #footer .footer-info .footer-sec .info nav a {
@@ -319,16 +498,12 @@
   transition: all 0.5s ease;
 }
 
-#footer .footer-info .footer-sec .info nav a:hover {
-  color: blue;
-  text-decoration: none;
-  padding-left: 10px;
-}
+@media (max-width: 767px) {
+  #footer .footer-info {
+    flex-direction: column;
+  }
 
-#footer .footer-info .footer-sec .info nav a i {
-  color: #ffffff;
-  width: 10px;
-  height: 10px;
-  margin: 10px;
-  font-size: 20px;
+  #footer .footer-info .footer-sec {
+    margin-top: 10px;
+  }
 }
