@@ -7,11 +7,6 @@ html {
   scroll-behavior: smooth;
 }
 
-#fixed-background {
-  position: fixed;
-  z-index: -1;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -129,30 +124,6 @@ a:hover {
   min-height: 100px;
 }
 
-/* Video */
-.video-container {
-  display: flex;
-
-  margin-bottom: 32px;
-  margin-left: 16px;
-  margin-right: 16px;
-  padding: 8px;
-  border-radius: 8px;
-}
-.video-container #myVideo {
-  width: 50%;
-  border: 3px solid #333333;
-  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-}
-
-.video-container .video-text {
-  width: 50%;
-}
-/* Carousel */
-.carousel-dark .carousel-caption {
-  color: #b1b4bd;
-}
-/*  */
 .showcase {
   background: url("../img/showcase.jpg") no-repeat;
   background-position: center;
