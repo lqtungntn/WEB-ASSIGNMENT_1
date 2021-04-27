@@ -82,9 +82,8 @@ a:hover {
   text-decoration: none;
 }
 
-.navbar-brand > img {
-  width: 60px;
-  height: auto;
+.navbar .navbar-brand {
+  font-size: 2rem;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
