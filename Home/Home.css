@@ -2,13 +2,147 @@ body {
   background-color: #f1faee;
   background-repeat: repeat-x;
 }
-.navbar {
-  background-color: #1d3557;
+
+html {
+  scroll-behavior: smooth;
 }
 
-.navbar-inverse .navbar-nav > li > a {
-  color: #e63946;
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Poppins";
+  line-height: 20px;
+  color: #b1b4bd;
+  background-color: #323a45;
 }
+
+a {
+  color: #b1b4bd;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #e74c3c;
+}
+
+.header-background {
+  position: static;
+  display: block;
+  overflow: visible;
+  top: 0;
+  height: auto;
+  min-height: 750px;
+  margin-bottom: 50px;
+  padding-bottom: 70px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(50, 58, 69, 0.9))
+  );
+  background-image: linear-gradient(
+      180deg,
+      rgba(50, 58, 69, 0.55),
+      rgba(50, 58, 69, 0.74)
+    ),
+    url(../image/background.jpg);
+  flex-direction: column;
+  background-position: 0px 0px 100% 50%;
+  background-size: auto, cover;
+  white-space: normal;
+  object-fit: fill;
+  -o-object-fill: fill;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-box-direction: column;
+  -ms-flex-direction: column;
+}
+
+.sticky-nav {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  padding: 20px;
+  z-index: 1;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  -ms-grid-row-align: auto;
+  align-self: auto;
+  -webkit-box-flex-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  background-color: rgba(12, 32, 59, 0.5);
+}
+
+.navbar .navbar-brand a {
+  padding: 1rem 0;
+  display: block;
+  text-decoration: none;
+}
+
+.navbar-brand {
+  font-size: 2.2rem;
+  color: white;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 10px 6px;
+  outline: none;
+}
+
+.navbar-toggler span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border: 1px;
+  background: #fff;
+}
+.navbar-toggler span + span {
+  margin-top: 4px;
+  width: 22px;
+}
+.navbar-toggler span + span + span {
+  width: 22px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 1.4 rem 1 rem;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link.active {
+  color: #e74c3c;
+}
+
+/* .btn {
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+}
+
+.btn:hover {
+  background-color: #0a3d62;
+  color: #fff;
+} */
+
+.heading {
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 1.4;
+  text-align: center;
+  color: #fff;
+  margin-top: 180px;
+  margin-bottom: 8px;
+  min-height: 100px;
+}
+
+/* Carousel */
 
 #footer {
   background-color: #1c1c1c;
