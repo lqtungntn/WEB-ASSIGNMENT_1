@@ -153,8 +153,22 @@ a:hover {
 }
 
 .video-container .video-text {
+  text-align: center;
+  vertical-align: middle;
   width: 50%;
+  font-family: "Unisect Vnu";
+  color: #f1faee;
+  justify-content: center;
+  margin-bottom: auto;
+  margin-top: auto;
 }
+
+.video-container .video-text > h2 {
+  visibility: visible;
+  animation-name: slideInDown;
+  font-family: "Unisect Vnu";
+}
+
 /* Carousel */
 .carousel-dark .carousel-caption {
   color: #b1b4bd;
@@ -165,7 +179,7 @@ a:hover {
   background-position: center;
   height: 600px;
   padding: 140px 100px;
-  color: #fff;
+  color: #f1faee;
 }
 
 .showcase-container {
@@ -176,6 +190,7 @@ a:hover {
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
+  font-family: "Unisect Vnu";
 }
 
 .showcase hr {
@@ -188,6 +203,7 @@ a:hover {
 .showcase p {
   font-size: 16px;
   padding-bottom: 20px;
+  font-family: "Unisect Vnu";
 }
 
 .section {
