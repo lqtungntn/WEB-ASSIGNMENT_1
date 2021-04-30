@@ -136,17 +136,20 @@ a:hover {
   margin-bottom: 32px;
   margin-left: 16px;
   margin-right: 16px;
-  padding: 8px;
   border-radius: 8px;
 }
 .video-container #myVideo {
+  padding: 4px;
   width: 50%;
   border: 3px solid #333333;
-  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  border-radius: 3px;
   filter: opacity(70%);
 }
 
 .video-container #myVideo:hover {
+  padding: 4px;
+  border: 3px solid #333333;
+  border-radius: 3px;
   filter: opacity(100%);
   width: 70%;
   justify-content: center;
