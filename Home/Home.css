@@ -142,7 +142,7 @@ a:hover {
 .video-container #myVideo {
   text-align: center;
   padding: 4px;
-  width: 50%;
+  width: 48%;
   border: 3px solid #333333;
   border-radius: 3px;
   filter: opacity(50%);
@@ -153,13 +153,12 @@ a:hover {
   border: 3px solid #333333;
   border-radius: 3px;
   filter: opacity(100%);
-  width: 51%;
+  width: 50%;
   justify-content: center;
 }
 
 .video-container .video-text {
   display: block;
-  text-align: center;
   width: 49%;
   font-family: "Unisect Vnu";
   color: #f1faee;
@@ -167,9 +166,11 @@ a:hover {
   margin-bottom: auto;
   margin-top: auto;
   display: grid;
+  margin-left: 1%;
 }
 
 .video-container .video-text > h2 {
+  text-align: center;
   visibility: visible;
   font-family: "Unisect Vnu";
   line-height: 0.9;
@@ -181,8 +182,6 @@ a:hover {
 }
 /*  */
 .showcase {
-  background: url("../img/showcase.jpg") no-repeat;
-  background-position: center;
   height: 600px;
   padding: 140px 100px;
   color: #f1faee;
