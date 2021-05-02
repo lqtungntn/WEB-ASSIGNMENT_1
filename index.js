@@ -1,2 +1,6 @@
-// var element = document.querySelector("nav navbar-nav > li.active");
-// return element ? element.classList.value : undefined;
+// const x = setInterval(function () {
+//   const videoText = document.getElementsByClassName("video-text");
+//   videoText.innerHTML = "hello";
+// }, 3000);
+const videoText = document.getElementsByClassName("video-text");
+videoText.innerHTML = "hello";
