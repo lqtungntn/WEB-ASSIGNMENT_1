@@ -5,6 +5,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  font-family: "Poppins";
 }
 
 #fixed-background {
@@ -28,7 +29,7 @@ a {
 }
 
 a:hover {
-  color: #e74c3c;
+  color: #ef8089;
 }
 
 .header-background {
@@ -132,13 +133,14 @@ a:hover {
 /* Video */
 .video-container {
   display: flex;
-
+  flex-wrap: wrap;
   margin-bottom: 32px;
   margin-left: 16px;
   margin-right: 16px;
   border-radius: 8px;
 }
 .video-container #myVideo {
+  text-align: center;
   padding: 4px;
   width: 50%;
   border: 3px solid #333333;
@@ -505,11 +507,16 @@ footer li {
 }
 
 footer p {
-  line-height: 24px;
+  line-height: 30px;
   margin-bottom: 10px;
   font-size: 15px;
 }
-
+footer p:hover {
+  background-color: #e94957;
+  color: #f1faee;
+  text-align: center;
+  transition: 0.3s;
+}
 .wpcf7-form-control-wrap .wpcf7-form-control {
   padding: 7px !important;
   width: 100%;
