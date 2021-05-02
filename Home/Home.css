@@ -145,7 +145,7 @@ a:hover {
   width: 50%;
   border: 3px solid #333333;
   border-radius: 3px;
-  filter: opacity(70%);
+  filter: opacity(50%);
 }
 
 .video-container #myVideo:hover {
@@ -153,14 +153,14 @@ a:hover {
   border: 3px solid #333333;
   border-radius: 3px;
   filter: opacity(100%);
-  width: 70%;
+  width: 51%;
   justify-content: center;
 }
 
 .video-container .video-text {
   text-align: center;
   vertical-align: middle;
-  width: 50%;
+  width: 49%;
   font-family: "Unisect Vnu";
   color: #f1faee;
   justify-content: center;
@@ -674,4 +674,44 @@ footer .widget ul {
 
 .footer-site-info {
   padding-top: 10px;
+}
+
+/*========== Non-Mobile First Method ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .group-card .card {
+    width: 50%;
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  #site-title {
+    width: 40%;
+  }
+  #link {
+    width: 60%;
+  }
+
+  .form-control {
+    flex-wrap: wrap;
+  }
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .group-card .card {
+    width: 100%;
+  }
+  .form-control {
+    width: 100%;
+    margin: 3% 5%;
+  }
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  .category-text {
+    font-size: 1.5rem;
+  }
 }
