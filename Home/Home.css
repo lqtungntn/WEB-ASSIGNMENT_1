@@ -158,8 +158,8 @@ a:hover {
 }
 
 .video-container .video-text {
+  display: block;
   text-align: center;
-  vertical-align: middle;
   width: 49%;
   font-family: "Unisect Vnu";
   color: #f1faee;
@@ -167,27 +167,13 @@ a:hover {
   margin-bottom: auto;
   margin-top: auto;
   display: grid;
-  grid-template-columns: max-content max-content;
 }
 
 .video-container .video-text > h2 {
   visibility: visible;
-  animation-name: slideInDown;
   font-family: "Unisect Vnu";
-  writing-mode: vertical-lr;
   line-height: 0.9;
   font-size: 40px;
-}
-
-.rotate {
-  transform: rotate(180deg);
-}
-
-.rotate-90 {
-  transform: rotate(90deg);
-}
-.rotate-90:hover {
-  transform: rotate(270deg);
 }
 /* Carousel */
 .carousel-dark .carousel-caption {
