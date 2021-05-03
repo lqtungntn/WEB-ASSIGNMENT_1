@@ -8,6 +8,10 @@ html {
   font-family: "Poppins";
 }
 
+ul {
+  list-style-image: linear-gradient(to left bottom, red, white);
+}
+
 #fixed-background {
   position: fixed;
   z-index: -1;
@@ -161,7 +165,7 @@ a:hover {
   display: block;
   width: 49%;
   font-family: "Unisect Vnu";
-  color: #f1faee;
+  color: #b1b4bd;
   justify-content: center;
   margin-bottom: auto;
   margin-top: auto;
@@ -175,10 +179,6 @@ a:hover {
   font-family: "Unisect Vnu";
   line-height: 0.9;
   font-size: 40px;
-}
-/* Carousel */
-.carousel-dark .carousel-caption {
-  color: #b1b4bd;
 }
 /*  */
 .showcase {
@@ -211,6 +211,38 @@ a:hover {
   font-family: "Unisect Vnu";
 }
 
+.container-2 {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(50, 58, 69, 0.9))
+  );
+  background-image: linear-gradient(
+      180deg,
+      rgba(50, 58, 69, 0.55),
+      rgba(50, 58, 69, 0.74)
+    ),
+    url(../image/background-2.jpg);
+}
+
+.container-2 h2,
+h4 {
+  text-align: center;
+}
+
+.column-layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column-layout .column--1 {
+  width: 46%;
+  margin: 2% 2%;
+}
+.column-layout .column--2 {
+  width: 46%;
+  margin: 2% 2%;
+}
 .section {
   padding: 40px 0;
 }
