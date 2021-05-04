@@ -110,6 +110,12 @@ a:hover {
   color: #e74c3c;
 }
 
+.logo {
+  justify-content: right;
+}
+.logo > img {
+  width: 80px;
+}
 /* .btn {
   background-color: #e74c3c;
   color: white;
@@ -227,10 +233,13 @@ h4 {
   flex-wrap: wrap;
 }
 .column-layout .column--1 {
+  text-align: justify;
   width: 46%;
   margin: 2% 2%;
 }
 .column-layout .column--2 {
+  text-align: justify;
+
   width: 46%;
   margin: 2% 2%;
 }
