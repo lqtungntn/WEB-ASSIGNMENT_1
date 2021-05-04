@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Mercedes</title>
+  <title>Products</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="../image/favicon.ico" />
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  
-  <link rel="stylesheet" type="text/css" href="./Product.css">
+  <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+  
+  
+  <!--Products-->
+  
+  <link href="./vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="./vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="./vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="./vendor/venobox/venobox.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./Products.css">
+  
 </head>
 <body>
-  <div class=header-background>
+  <img id="fixed-background" src="./image_product/bg_p3.jpg" alt="fixed-image">
+  <div class="header-background">
     <div id="nav" class="sticky-nav">
       <nav class="navbar navbar-expand-lg ">
         <div class="container">
@@ -20,106 +31,456 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
               <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="http://127.0.0.1:5500/Home/Home.html">Trang chủ</a>
+                <a class="nav-link" aria-current="page" href="../Home/Home.html">Trang chủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="http://127.0.0.1:5500/Introduce/Introduce.html#">Giới thiệu</a>
+                <a class="nav-link" aria-current="page" href="../Introduce/Introduce.html#">Giới thiệu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/Product/Product.html">Sản phẩm</a>
+                <a class="nav-link active" aria-current="page" href="../Product/Product.html">Sản phẩm</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="http://127.0.0.1:5500/Price/Price.html">Bảng giá</a>
+                <a class="nav-link" aria-current="page" href="../Price/Pricea200.html">Bảng giá</a>
               </li>
               <li class="nav-item">
-                <a href="http://127.0.0.1:5500/Contact/Contacts.html"class="nav-link" aria-current="page" href="#">Liên hệ</a>
+                <a href="../Contact/Contacts.html"class="nav-link" aria-current="page" href="#">Liên hệ</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </div>
-    <section class="showcase">
-      <div class="showcase-container w3-container w3-center">
-        <h1 class="w3-text-shadow w3-animate-opacity">Thế giới Mercedes</h1>
-        <hr>
-        <p class="w3-animate-opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-        <button onclick="document.getElementById('start-modal').style.display='block'" class="w3-button w3-red w3-large w3-opacity">Khám phá</button>
+    
+  </div>
+  
+  
+  <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <h3>Các dòng xe Mercedes</h3>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+			  <li data-filter=".filter-a">A-CLASS</li>
+              <li data-filter=".filter-c">C-CLASS</li>
+              <li data-filter=".filter-e">E-CLASS</li>
+			  <li data-filter=".filter-gla">GLA-CLASS</li>
+              <li data-filter=".filter-glc">GLC-CLASS</li>
+			  <li data-filter=".filter-gle">GLE-CLASS</li>
+			  <li data-filter=".filter-gls">GLS-CLASS</li>
+			  <li data-filter=".filter-mb">MAYBACH</li>
+			  <li data-filter=".filter-v">V-CLASS</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-a">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_class a200.jpg" class="img-fluid">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_class a200.jpg" data-gall="portfolioGallery" class="venobox" title="A200"><i class="bx bx-plus"><h6>A200</h6></i></a>
+                <a href="../Price/Pricea200.html"><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-a">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_class a250.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_class a250.jpg" data-gall="portfolioGallery" class="venobox" title="A250"><i class="bx bx-plus"><h6>A250</h6></i></a>
+                <a href="../Price/Price.html#a250" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-c">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_class c200.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_class c200.jpg" data-gall="portfolioGallery" class="venobox" title="C200"><i class="bx bx-plus"><h6>C200</h6></i></a>
+                <a href="../Price/Price.html#c200" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-c">
+            <div class="portfolio-wrap">
+				
+              <img src="./image_product/filter_class c250.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_class c250.jpg" data-gall="portfolioGallery" class="venobox" title="C250"><i class="bx bx-plus"><h6>C250</h6></i></a>
+				
+                <a href="../Price/Price.html#c250"><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+			  
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-c">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_class c300.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_class c300.jpg" data-gall="portfolioGallery" class="venobox" title="C300"><i class="bx bx-plus"><h6>C300</h6></i></a>
+                <a href="../Price/Price.html#c300" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-e">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_class e200.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_class e200.jpg" data-gall="portfolioGallery" class="venobox" title="E200"><i class="bx bx-plus"><h6>E200</h6></i></a>
+                <a href="../Price/Price.html#e200" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-e">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_class e250.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_class e250.jpg" data-gall="portfolioGallery" class="venobox" title="E250"><i class="bx bx-plus"><h6>E250</h6></i></a>
+                <a href="../Price/Price.html#e250" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-e">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_class e300.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_class e300.jpg" data-gall="portfolioGallery" class="venobox" title="E300"><i class="bx bx-plus"><h6>E300</h6></i></a>
+                <a href="../Price/Price.html#e300" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+		  
+		  <div class="col-lg-4 col-md-6 portfolio-item filter-gla">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_gla_35_4matic.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_gla_35_4matic.png" data-gall="portfolioGallery" class="venobox" title="GLA 200 4MATIC"><i class="bx bx-plus"><h6>GLA 200 4MATIC</h6></i></a>
+                <a href="../Price/Price.html#gla200" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+		  
+		  <div class="col-lg-4 col-md-6 portfolio-item filter-gla">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_gla_45_4matic.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_gla_45_4matic.png" data-gall="portfolioGallery" class="venobox" title="GLA 45 4MATIC"><i class="bx bx-plus"><h6>GLA 45 4MATIC</h6></i></a>
+                <a href="../Price/Price.html#gla45" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+		  
+		  <div class="col-lg-4 col-md-6 portfolio-item filter-gla">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_gla_250_4matic.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_gla_250_4matic.png" data-gall="portfolioGallery" class="venobox" title="GLA 250 4MATIC"><i class="bx bx-plus"><h6>GLA 250 4MATIC</h6></i></a>
+                <a href="../Price/Price.html#gla250" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+		  
+          <div class="col-lg-4 col-md-6 portfolio-item filter-glc">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_glc_compact.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_glc_compact.png" data-gall="portfolioGallery" class="venobox" title="GLC COMPACT"><i class="bx bx-plus"><h6>GLC COMPACT</h6></i></a>
+                <a href="../Price/Price.html" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+		  
+		  <div class="col-lg-4 col-md-6 portfolio-item filter-glc">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_glc_coupe.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_glc_coupe.jpeg" data-gall="portfolioGallery" class="venobox" title="GLC COUPE"><i class="bx bx-plus"><h6>GLC COUPE</h6></i></a>
+                <a href="../Price/Price.html" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+		  
+		  <div class="col-lg-4 col-md-6 portfolio-item filter-glc">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_glc_suv.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_glc_suv.jpg" data-gall="portfolioGallery" class="venobox" title="GLC SUV"><i class="bx bx-plus"><h6>GLC SUV</h6></i></a>
+                <a href="../Price/Price.html" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+		  
+		  <div class="col-lg-4 col-md-6 portfolio-item filter-gle">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_gle_coupe.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_gle_coupe.jpg" data-gall="portfolioGallery" class="venobox" title="GLE COUPE"><i class="bx bx-plus"><h6>GLE COUPE</h6></i></a>
+                <a href="../Price/Price.html" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+		   
+		   <div class="col-lg-4 col-md-6 portfolio-item filter-gle">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_gle_suv.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_gle_suv.jpg" data-gall="portfolioGallery" class="venobox" title="GLE SUV"><i class="bx bx-plus"><h6>GLE SUV</h6></i></a>
+                <a href="../Price/Price.html" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+		   
+		  <div class="col-lg-4 col-md-6 portfolio-item filter-gls">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_gls_63_4matic.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_gls_63_4matic.png" data-gall="portfolioGallery" class="venobox" title="GLS 63 4MATIC"><i class="bx bx-plus"><h6>GLS 63 4MATIC</h6></i></a>
+                <a href="../Price/Price.html" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+		  
+		  <div class="col-lg-4 col-md-6 portfolio-item filter-gls">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_gls_580_4matic.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_gls_580_4matic.png" data-gall="portfolioGallery" class="venobox" title="GLS 580 4MATIC"><i class="bx bx-plus"><h6>GLS 580 4MATIC</h6></i></a>
+                <a href="../Price/Price.html" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+		   
+		   <div class="col-lg-4 col-md-6 portfolio-item filter-gls">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_gls_suv.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_gls_suv.jpg" data-gall="portfolioGallery" class="venobox" title="GLS SUV"><i class="bx bx-plus"><h6>GLS SUV</h6></i></a>
+                <a href="../Price/Price.html" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+		   
+		   <div class="col-lg-4 col-md-6 portfolio-item filter-mb">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_mb_560_4matic.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_mb_560_4matic.png" data-gall="portfolioGallery" class="venobox" title="MAYBACH 560 4MATIC"><i class="bx bx-plus"><h6>MAYBACH 560 4MATIC</h6></i></a>
+                <a href="../Price/Price.html" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+		  
+		  <div class="col-lg-4 col-md-6 portfolio-item filter-mb">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_mb_650_pullman.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_mb_650_pullman.png" data-gall="portfolioGallery" class="venobox" title="MAYBACH 650 PULLMAN"><i class="bx bx-plus"><h6>MAYBACH 650 PULLMAN</h6></i></a>
+                <a href="../Price/Price.html" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+		  
+		  <div class="col-lg-4 col-md-6 portfolio-item filter-mb">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_mb_cabriolet.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_mb_cabriolet.png" data-gall="portfolioGallery" class="venobox" title="MAYBACH CABRIOLET"><i class="bx bx-plus"><h6>MAYBACH CABRIOLET</h6></i></a>
+                <a href="../Price/Price.html" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+		  
+		  <div class="col-lg-4 col-md-6 portfolio-item filter-mb">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_mb_gls.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_mb_gls.png" data-gall="portfolioGallery" class="venobox" title="MAYBACH GLS"><i class="bx bx-plus"><h6>MAYBACH GLS</h6></i></a>
+                <a href="../Price/Price.html" ><i class="bx bx-link"><h6>Chi tiết</h6></i></a>
+              </div>
+            </div>
+          </div>
+		   
+		  <div class="col-lg-4 col-md-6 portfolio-item filter-v">
+            <div class="portfolio-wrap">
+              <img src="./image_product/filter_class v_mpv.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="./image_product/filter_class v_mpv.png" data-gall="portfolioGallery" class="venobox" title="MPV"><i class="bx bx-plus"><h6>MPV</h6></i></a>
+                <a href="../Price/Price.html" ><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+              </div>
+            </div>
+          </div>
+		   
+        </div>
+
       </div>
     </section>
-  </div>
-  <!-- test -->
-  
-<footer id="footer">
-  <div class="footer-top">
-      <h4>
-          Chúng tôi hỗ trợ khách hàng 7 ngày trong tuần với hotline
-          <br>
-          <span class="footer-phone">0932968998</span>
-      </h4>
-      <p>
-          Với đội ngũ nhân viên kinh nghiệm, nhiệt huyết, tận tình
-      </p>
-      <ul>
-          <li class="icon-fa">
-              <i class="fa fa-headphones" aria-hidden="true" id="BG-hp"></i>
-              <span class="info-name">
-                  <strong>Đường dây nóng</strong>
-              </span>
-              <a class="info-tel" href="tel:0932968998" rel="nofollow">0932968998</a>
-          </li>
-          <li class="icon-fa">
-              <i class="fa fa-envelope" aria-hidden="true" id="BG-env"></i>
-              <span class="info-name">
-                  <strong>Gửi yêu cầu</strong>
-              </span>
-              <a class="info-tel" href="mailto:conghoanguyen98@gmail.com" rel="nofollow">conghoanguyen98@gmail.com</a>
-          </li>
-      </ul>
-  </div>
-  <div class="footer-info">
-      <section class="footer-sec">
-          <h2>Dịch vụ</h2>
-          <ul>
-              <li><a href="#">Bảo hành</a></li>
-              <li><a href="#">Thay thiết bị</a></li>
-              <li><a href="#">Sửa chữa</a></li>
-              <li><a href="#">Mua linh kiện - phụ tùng</a></li>
-              <li><a href="#">Báo giá sản phẩm</a></li>
-              <li><a href="#">Mua xe mới</a></li>
-          </ul>
-      </section>
-      <section class="footer-sec">
-          <h2>Về chúng tôi</h2>
-          <ul>
-              <li><a href="#">Giới thiệu</a></li>
-              <li><a href="#">Hướng dẫn thanh toán</a></li>
-              <li><a href="#">Câu hỏi thường gặp</a></li>
-              <li><a href="#">Chính sách đại lí</a></li>
-              <li><a href="#">Thông báo</a></li>
-              <li><a href="#">Khuyến mãi</a></li>
-              <li><a href="#">tài liệu</a></li>
-              <li><a href="#">Blog</a></li>
-          </ul>
-      </section>
-      <section class="footer-sec">
-          <h2>Liên hệ</h2>
-          <div class="info">
-              <nav>
-                  <a href="#"><i class="fa fa-phone-square" aria-hidden="true" id="BG-hp"></i> Số điện thoại: 0932968998</a>
-                  <br>
-                  <a href="#"><i class="fa fa-envelope" aria-hidden="true" id="BG-env"></i> Email: conghoanguyen98@gmail.com</a>
-              </nav>
+
+<!--Footer-->
+
+<div class="page-wrapper">
+  <div id="waterdrop"></div>
+  <footer>
+    <div class="footer-top">
+      <div class="pt-exebar">
+
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-12 col-sm-12 footer-col-3">
+            <div class="widget footer_widget">
+              <h5 class="footer-title">Khách hàng</h5>
+              <p>Câu hỏi thường gặp</p>
+              <p>Hỗ trợ khách hàng</p>
+              <p>Hỗ trợ bảo trì</p>
+              <p>Hướng dẫn sử dụng</p>
+              <p>Lịch dịch vụ</p>
+              <p>Hướng dẫn thanh toán</p>
+            </div>
           </div>
-          <div class="social-link">
-              <a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-              <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-              <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-              <a href=""><i class="fa fa-reddit-alien" aria-hidden="true"></i></a>
+          <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+            <div class="row">
+              <div class="col-6 col-lg-6 col-md-6 col-sm-6">
+                <div class="widget footer_widget">
+                  <h5 class="footer-title">Dịch vụ</h5>
+                  <p>Bảo hành</p>
+                  <p>Thay thế thiết bị</p>
+                  <p>Sửa chữa</p>
+                  <p>Mua linh kiện phụ tùng</p>
+                  <p>Báo giá sản phẩm</p>
+                  <p>Mua xe mới</p>
+                </div>
+              </div>
+              <div class="col-6 col-lg-6 col-md-6 col-sm-6">
+                <!-- <div class="widget">
+                  <h5 class="footer-title">Email Us</h5>
+                  <div class="textwidget">
+                    <div role="form" class="wpcf7" id="wpcf7-f4-o1" lang="en-US" dir="ltr">
+
+                      <form method="post" class="wpcf7-form" novalidate="novalidate">
+
+                        <div class="contact-form-footer">
+                          <p><span class="wpcf7-form-control-wrap your-first-name"><input type="text" name="your-first-name" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Your name"></span></p>
+                          <p><span class="wpcf7-form-control-wrap your-email_1"><input type="email" name="your-email_1" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="Your email"></span></p>
+                          <p><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your message"></textarea></span></p>
+                          <div><input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div> -->
+                 <div class="widget widget_gallery gallery-grid-4">
+              <h5 class="footer-title">Về chúng tôi</h5>
+              <p>Giới thiệu</p>
+              <p>Chính sách đại lý</p>
+              <p>Thông báo</p>
+              <p>Khuyến mãi</p>
+              <p>Tài liệu</p>
+              <p>Blog</p>
+            </div>
+              </div>
+            </div>
           </div>
-      </section>
-  </div>
-</footer>
+          <div class="col-12 col-lg-3 col-md-5 col-sm-12 footer-col-4">
+            <!-- <div class="widget widget_gallery gallery-grid-4">
+              <h5 class="footer-title">Dunno</h5>
+            </div> -->
+            <div class="widget">
+              <h5 class="footer-title">Phản hồi</h5>
+              <div class="textwidget">
+                <div role="form" class="wpcf7" id="wpcf7-f4-o1" lang="en-US" dir="ltr">
+
+                  <form method="post" class="wpcf7-form" novalidate="novalidate">
+
+                    <div class="contact-form-footer">
+                      <p><span class="wpcf7-form-control-wrap your-first-name"><input type="text" name="your-first-name" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Your name"></span></p>
+                      <p><span class="wpcf7-form-control-wrap your-email_1"><input type="email" name="your-email_1" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="Your email"></span></p>
+                      <p><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your message"></textarea></span></p>
+                      <div><input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+            <nav id="footer-navigation" class="site-navigation footer-navigation centered-box" role="navigation">
+              <ul id="footer-menu" class="nav-menu styled clearfix inline-inside">
+                <li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26"><a href="#">Bản quyền nội dung</a></li>
+                <li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a href="#">Cài đặt</a></li>
+                <li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28"><a href="#">Quyền riêng tư và bảo vệ dữ liệu</a></li>
+                <li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29"><a href="#">Thông tin pháp lý</a></li>
+              </ul>
+            </nav>
+
+            <div id="footer-socials">
+              <div class="socials inline-inside socials-colored">
+
+                <a href="#" target="_blank" title="Facebook" class="socials-item">
+                  <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>
+                <a href="#" target="_blank" title="Twitter" class="socials-item">
+                  <i class="fa fa-twitter-square" aria-hidden="true"></i>
+
+                </a>
+                <a href="#" target="_blank" title="Instagram" class="socials-item">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#" target="_blank" title="YouTube" class="socials-item">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+                <a href="#" target="_blank" title="Telegram" class="socials-item">
+                  <i class="fa fa-telegram" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+
+<script> jQuery('#waterdrop').raindrops({color:'#1c1f2f', canvasHeight:150, density: 0.1, frequency: 20});
+</script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script></body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+
+<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="./vendor/jquery/jquery.min.js"></script>
+  <script src="./vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="./vendor/counterup/counterup.min.js"></script>
+  <script src="./vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="./vendor/venobox/venobox.min.js"></script>
+  <script src="../vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="../vendor/aos/aos.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../vendor/php-email-form/validate.js"></script>
+  <script src="../vendor/waypoints/jquery.waypoints.min.js"></script>
+  <!-- Template Main JS File -->
+  <script src="./vendor/js/main.js"></script>
+</body>
 </html>
