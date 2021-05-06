@@ -209,6 +209,8 @@ a:hover {
 .container-2 {
   display: block;
   color: #f1faee;
+  background-position: center;
+  background-size: cover;
   background-image: -webkit-gradient(
     linear,
     left top,
