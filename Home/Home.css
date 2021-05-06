@@ -154,7 +154,7 @@ a:hover {
   border-radius: 8px;
   justify-content: center;
 }
-.video-container #myVideo {
+.video-container .myVideo {
   text-align: center;
   padding: 4px;
   margin: 2%;
@@ -164,7 +164,7 @@ a:hover {
   filter: opacity(50%);
 }
 
-.video-container #myVideo:hover {
+.video-container .myVideo:hover {
   margin: 1%;
   padding: 2%;
   border: 3px solid #333333;
@@ -690,14 +690,14 @@ footer .widget ul {
 /*========== Non-Mobile First Method ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1199px) {
-  .video-container #myVideo {
+  .video-container .myVideo {
     width: 96%;
     background-color: #f1faee;
   }
   .video-container .video-text {
     width: 96%;
   }
-  .video-container #myVideo:hover {
+  .video-container .myVideo:hover {
     width: 98%;
   }
   .container .contact-column {
