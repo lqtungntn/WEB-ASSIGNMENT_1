@@ -452,33 +452,15 @@ footer li {
   position: relative;
 }
 
-footer .widget ul {
-  list-style: none;
-  margin-top: 5px;
-  padding-left: 0px;
-}
-
-.posts li {
-  border-bottom: 1px solid #393d50;
-  padding-bottom: 12px;
-  padding-top: 6px;
-}
-
 footer p,
 footer li {
-  font-size: 15px;
-  line-height: 22px;
-}
-
-.gem-pp-posts-date {
-  color: #00bcd4;
-  font-size: 89.5%;
+  font-size: 1rem;
+  line-height: 2rem;
 }
 
 footer p {
-  line-height: 30px;
-  margin-bottom: 10px;
-  font-size: 15px;
+  margin-bottom: 5%;
+  font-size: 1rem;
 }
 footer p:hover {
   background-color: #e94957;
@@ -669,17 +651,7 @@ footer .widget ul {
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  .group-card .card {
-    width: 100%;
-  }
-  .form-control {
-    width: 100%;
-    margin: 3% 5%;
-  }
 }
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  .category-text {
-    font-size: 1.5rem;
-  }
 }
