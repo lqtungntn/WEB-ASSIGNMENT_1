@@ -24,7 +24,7 @@ body {
   font-family: "Poppins";
   line-height: 20px;
   color: #b1b4bd;
-  background-color: #1d3557;
+  background-color: black;
 }
 
 a {
@@ -47,7 +47,8 @@ a:hover {
   margin-left: 1px;
   margin-right: 1px;
   padding-bottom: 70px;
-
+  background-position: center;
+  background-size: cover;
   background-image: -webkit-gradient(
     linear,
     left top,
@@ -271,20 +272,14 @@ footer {
   background: #303030;
   background-size: cover;
   background-position: center;
-  padding: 0 0 20px;
+  padding: 2% 5%;
   font-family: rubik;
-  padding-top: 30px;
 }
 
 .footer-top,
 .footer-bottom {
   background-color: #1c1f2f;
-}
-
-.footer-bottom {
-  padding: 15px 0;
-  border-top: 1px solid #313646;
-  background-color: #181828 !important;
+  padding: 2% 0;
   color: #b0b0b0;
   font-family: rubik;
 }
@@ -294,6 +289,7 @@ footer {
 
 .row {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-site-info {
@@ -308,7 +304,7 @@ footer {
 #footer-navigation li a:hover,
 .custom-footer,
 .custom-footer li a:hover {
-  color: white;
+  color: #c82929;
 }
 
 #footer-navigation,
@@ -316,7 +312,6 @@ footer {
 .custom-footer,
 .custom-footer li a {
   color: #99a9b5;
-  padding-top: 15px;
 }
 
 .footer-bottom ul {
@@ -333,31 +328,25 @@ footer {
 }
 #footer-menu {
   display: flex;
+  flex-wrap: wrap;
 }
+
 #footer-menu li {
   width: 25%;
   display: inline-block;
-  padding: 0 21px;
   position: relative;
-  line-height: 1;
+  line-height: 1rem;
   text-align: center;
 }
 
 #footer-navigation,
 #footer-navigation li a,
-.custom-footer,
-.custom-footer li a {
+.footer-menu,
+.footer-menu li a {
   color: #99a9b5;
-  padding-top: 15px;
+  padding-top: 2%;
 }
 
-#footer-navigation,
-#footer-navigation li a,
-.custom-footer,
-.custom-footer li a {
-  color: #99a9b5;
-  padding-top: 15px;
-}
 #footer-menu li + li:before {
   content: "";
   width: 0;
@@ -370,17 +359,11 @@ footer {
   border-right: 1px solid #333146;
 }
 
-navigation li a,
-.custom-footer,
-.custom-footer li a {
-  color: #99a9b5;
-  padding-top: 15px;
-}
-
 #footer-socials {
   text-align: right;
   width: 40%;
   vertical-align: middle;
+  padding-top: 1%;
 }
 
 #footer-socials .socials {
@@ -396,9 +379,9 @@ a.socials-item {
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  margin: 0 5px;
-  line-height: 16px;
-  padding: 10px;
+  margin: 0 1%;
+  line-height: 1rem;
+  padding: 2%;
   border-radius: 50%;
   background-color: #141421;
   border: 1px solid #2e2e4c;
@@ -464,12 +447,12 @@ a.socials-item:hover {
 
 footer p,
 footer li {
-  font-size: 15px;
-  line-height: 22px;
+  font-size: 1rem;
+  line-height: 1rem;
 }
 
 .widget {
-  margin-bottom: 50px;
+  margin-bottom: 5%;
 }
 
 .footer-title {
