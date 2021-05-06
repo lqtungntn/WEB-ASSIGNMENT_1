@@ -338,7 +338,17 @@ footer {
   line-height: 1rem;
   text-align: center;
 }
-
+#footer-menu li + li:before {
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: -1px;
+  top: 0;
+  font-size: 0;
+  border-left: 1px solid #232234;
+  border-right: 1px solid #333146;
+}
 #footer-navigation,
 #footer-navigation li a,
 .footer-menu,
@@ -451,7 +461,16 @@ footer li {
   font-size: 1rem;
   position: relative;
 }
-
+.footer-title:after {
+  width: 50px;
+  background: #fff;
+  opacity: 0.2;
+  height: 1px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 footer p,
 footer li {
   font-size: 1rem;
