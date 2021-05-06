@@ -168,6 +168,10 @@ a:hover {
   display: grid;
   margin-left: 1%;
 }
+.video-container .video-text:hover {
+  background-color: gray;
+  color: #f1faee;
+}
 
 .video-container .video-text > h2 {
   text-align: center;
@@ -240,9 +244,7 @@ h4 {
   width: 46%;
   margin: 2% 2%;
 }
-.column-layout .column--1:hover {
-  color: #f1faee;
-}
+
 .column-layout .column--2 {
   text-align: justify;
   width: 46%;
@@ -289,9 +291,28 @@ footer {
     padding-top: 15px;
 } */
 
-.row {
+.container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container .customer-column {
+  width: 23%;
+}
+.container .service-column {
+  width: 23%;
+}
+.container .about-us-column {
+  width: 23%;
+}
+.container .customer-column {
+  width: 23%;
+}
+
+.container-last {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2% 13% 2% 9%;
 }
 
 .footer-site-info {
