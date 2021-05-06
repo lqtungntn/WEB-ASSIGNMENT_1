@@ -149,17 +149,19 @@ a:hover {
 }
 
 .video-container #myVideo:hover {
-  padding: 4px;
+  margin: 1%;
+  padding: 2%;
   border: 3px solid #333333;
-  border-radius: 3px;
+  border-radius: 2%;
   filter: opacity(100%);
   width: 50%;
   justify-content: center;
 }
 
 .video-container .video-text {
+  font-size: 1em;
   display: block;
-  width: 49%;
+  width: 46%;
   font-family: "Unisect Vnu";
   color: #b1b4bd;
   justify-content: center;
@@ -169,6 +171,9 @@ a:hover {
   margin-left: 1%;
 }
 .video-container .video-text:hover {
+  margin: auto auto;
+  padding: 1%;
+  border-radius: 5%;
   background-color: gray;
   color: #f1faee;
 }
@@ -670,10 +675,31 @@ footer .widget ul {
 
 /*========== Non-Mobile First Method ==========*/
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1199px) {
+  .video-container #myVideo {
+    width: 96%;
+  }
+  .video-container .video-text {
+    width: 96%;
+  }
+  .video-container #myVideo:hover {
+    width: 98%;
+  }
 }
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+  .container .customer-column {
+    width: 20%;
+  }
+  .container .service-column {
+    width: 20%;
+  }
+  .container .about-us-column {
+    width: 20%;
+  }
+  .container .contact-column {
+    width: 70%;
+  }
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
