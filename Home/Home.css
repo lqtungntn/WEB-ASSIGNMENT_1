@@ -347,18 +347,6 @@ footer {
   padding-top: 2%;
 }
 
-#footer-menu li + li:before {
-  content: "";
-  width: 0;
-  height: 100%;
-  position: absolute;
-  left: -1px;
-  top: 0;
-  font-size: 0;
-  border-left: 1px solid #232234;
-  border-right: 1px solid #333146;
-}
-
 #footer-socials {
   text-align: right;
   width: 40%;
@@ -368,7 +356,6 @@ footer {
 
 #footer-socials .socials {
   text-align: right;
-  margin: 0 -7px;
   vertical-align: middle;
 }
 
@@ -397,7 +384,7 @@ a.socials-item {
   width: 1em;
   height: 1em;
   line-height: 1;
-  font-size: 16px;
+  font-size: 1rem;
   text-align: center;
   vertical-align: top;
   font-feature-settings: normal;
@@ -456,33 +443,13 @@ footer li {
 }
 
 .footer-title {
-  margin-bottom: 40px;
+  margin-bottom: 5%;
   color: #fff;
   font-weight: 500;
   text-transform: capitalize;
-  padding-bottom: 15px;
-  font-size: 16px;
+  padding-bottom: 5%;
+  font-size: 1rem;
   position: relative;
-}
-
-.footer-title:after {
-  width: 50px;
-  background: #fff;
-  opacity: 0.2;
-  height: 1px;
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.gem-contacts-item {
-  padding-top: 10px;
-  font-size: 15px;
-}
-
-.gem-contacts-item i {
-  padding-right: 10px;
 }
 
 footer .widget ul {
@@ -520,7 +487,6 @@ footer p:hover {
   transition: 0.3s;
 }
 .wpcf7-form-control-wrap .wpcf7-form-control {
-  padding: 7px !important;
   width: 100%;
 }
 
