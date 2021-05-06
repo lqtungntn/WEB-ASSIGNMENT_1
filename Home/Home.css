@@ -240,9 +240,11 @@ h4 {
   width: 46%;
   margin: 2% 2%;
 }
+.column-layout .column--1:hover {
+  color: #f1faee;
+}
 .column-layout .column--2 {
   text-align: justify;
-
   width: 46%;
   margin: 2% 2%;
 }
