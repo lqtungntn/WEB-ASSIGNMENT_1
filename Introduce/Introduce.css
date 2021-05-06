@@ -87,7 +87,9 @@ a:hover {
 .navbar-expand-lg .navbar-nav .nav-link.active {
   color: #e74c3c;
 }
-
+.logo > img {
+  width: 80px;
+}
 /* .btn {
   background-color: #e74c3c;
   color: white;
@@ -156,12 +158,12 @@ a:hover {
     top: 0;
     height: 100%;
     left: 0; */
-.text-inline{
-color: #fff;
-padding-left: auto;
-padding-right: auto;
+.text-inline {
+  color: #fff;
+  padding-left: auto;
+  padding-right: auto;
 }
-.image-size{
+.image-size {
   height: 100%;
   width: 100%;
 }
@@ -192,20 +194,14 @@ footer {
   background: #303030;
   background-size: cover;
   background-position: center;
-  padding: 0 0 20px;
+  padding: 2% 5%;
   font-family: rubik;
-  padding-top: 30px;
 }
 
 .footer-top,
 .footer-bottom {
   background-color: #1c1f2f;
-}
-
-.footer-bottom {
-  padding: 15px 0;
-  border-top: 1px solid #313646;
-  background-color: #181828 !important;
+  padding: 2% 0;
   color: #b0b0b0;
   font-family: rubik;
 }
@@ -213,8 +209,28 @@ footer {
     padding-top: 15px;
 } */
 
-.row {
+.container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container .customer-column {
+  width: 23%;
+}
+.container .service-column {
+  width: 23%;
+}
+.container .about-us-column {
+  width: 23%;
+}
+.container .customer-column {
+  width: 23%;
+}
+
+.container-last {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2% 13% 2% 9%;
 }
 
 .footer-site-info {
@@ -229,7 +245,7 @@ footer {
 #footer-navigation li a:hover,
 .custom-footer,
 .custom-footer li a:hover {
-  color: white;
+  color: #c82929;
 }
 
 #footer-navigation,
@@ -237,7 +253,6 @@ footer {
 .custom-footer,
 .custom-footer li a {
   color: #99a9b5;
-  padding-top: 15px;
 }
 
 .footer-bottom ul {
@@ -254,30 +269,15 @@ footer {
 }
 #footer-menu {
   display: flex;
+  flex-wrap: wrap;
 }
+
 #footer-menu li {
   width: 25%;
   display: inline-block;
-  padding: 0 21px;
   position: relative;
-  line-height: 1;
+  line-height: 1rem;
   text-align: center;
-}
-
-#footer-navigation,
-#footer-navigation li a,
-.custom-footer,
-.custom-footer li a {
-  color: #99a9b5;
-  padding-top: 15px;
-}
-
-#footer-navigation,
-#footer-navigation li a,
-.custom-footer,
-.custom-footer li a {
-  color: #99a9b5;
-  padding-top: 15px;
 }
 #footer-menu li + li:before {
   content: "";
@@ -290,23 +290,23 @@ footer {
   border-left: 1px solid #232234;
   border-right: 1px solid #333146;
 }
-
-navigation li a,
-.custom-footer,
-.custom-footer li a {
+#footer-navigation,
+#footer-navigation li a,
+.footer-menu,
+.footer-menu li a {
   color: #99a9b5;
-  padding-top: 15px;
+  padding-top: 2%;
 }
 
 #footer-socials {
   text-align: right;
   width: 40%;
   vertical-align: middle;
+  padding-top: 1%;
 }
 
 #footer-socials .socials {
   text-align: right;
-  margin: 0 -7px;
   vertical-align: middle;
 }
 
@@ -317,9 +317,9 @@ a.socials-item {
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  margin: 0 5px;
-  line-height: 16px;
-  padding: 10px;
+  margin: 0 1%;
+  line-height: 1rem;
+  padding: 2%;
   border-radius: 50%;
   background-color: #141421;
   border: 1px solid #2e2e4c;
@@ -335,7 +335,7 @@ a.socials-item {
   width: 1em;
   height: 1em;
   line-height: 1;
-  font-size: 16px;
+  font-size: 1rem;
   text-align: center;
   vertical-align: top;
   font-feature-settings: normal;
@@ -385,24 +385,23 @@ a.socials-item:hover {
 
 footer p,
 footer li {
-  font-size: 15px;
-  line-height: 22px;
+  font-size: 1rem;
+  line-height: 1rem;
 }
 
 .widget {
-  margin-bottom: 50px;
+  margin-bottom: 5%;
 }
 
 .footer-title {
-  margin-bottom: 40px;
+  margin-bottom: 5%;
   color: #fff;
   font-weight: 500;
   text-transform: capitalize;
-  padding-bottom: 15px;
-  font-size: 16px;
+  padding-bottom: 5%;
+  font-size: 1rem;
   position: relative;
 }
-
 .footer-title:after {
   width: 50px;
   background: #fff;
@@ -413,43 +412,15 @@ footer li {
   bottom: 0;
   left: 0;
 }
-
-.gem-contacts-item {
-  padding-top: 10px;
-  font-size: 15px;
-}
-
-.gem-contacts-item i {
-  padding-right: 10px;
-}
-
-footer .widget ul {
-  list-style: none;
-  margin-top: 5px;
-  padding-left: 0px;
-}
-
-.posts li {
-  border-bottom: 1px solid #393d50;
-  padding-bottom: 12px;
-  padding-top: 6px;
-}
-
 footer p,
 footer li {
-  font-size: 15px;
-  line-height: 22px;
-}
-
-.gem-pp-posts-date {
-  color: #00bcd4;
-  font-size: 89.5%;
+  font-size: 1rem;
+  line-height: 2rem;
 }
 
 footer p {
-  line-height: 30px;
-  margin-bottom: 10px;
-  font-size: 15px;
+  margin-bottom: 5%;
+  font-size: 1rem;
 }
 footer p:hover {
   background-color: #e94957;
@@ -458,11 +429,11 @@ footer p:hover {
   transition: 0.3s;
 }
 .wpcf7-form-control-wrap .wpcf7-form-control {
-  padding: 7px !important;
   width: 100%;
 }
 
 .wpcf7-form-control-wrap input {
+  color: #f1faee;
   background: #1c1f2f;
   overflow: hidden;
   border: 1px solid #2e344d;
@@ -484,6 +455,7 @@ footer p:hover {
 }
 
 .wpcf7 .wpcf7-form .contact-form-footer textarea {
+  color: white;
   height: 160px;
   width: 100%;
 }
@@ -499,6 +471,7 @@ footer p:hover {
 }
 
 .wpcf7-form-control-wrap textarea {
+  color: white;
   background: #1c1f2f;
   overflow: hidden;
   border: 1px solid #2e344d;
@@ -617,3 +590,62 @@ footer .widget ul {
 }
 
 /* End footer css */
+/*========== Non-Mobile First Method ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1199px) {
+}
+.dropdown {
+  display: none;
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .dropdown {
+    display: block;
+  }
+
+  .navbar .container-nav {
+    justify-content: flex-start;
+  }
+
+  .container .customer-column {
+    width: 33%;
+  }
+  .container .service-column {
+    width: 33%;
+  }
+  .container .about-us-column {
+    width: 33%;
+  }
+  .container .contact-column {
+    width: 70%;
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .container .customer-column {
+    width: 50%;
+  }
+  .container .service-column {
+    width: 50%;
+  }
+  .container .about-us-column {
+    width: 50%;
+  }
+  .container .contact-column {
+    width: 50%;
+  }
+  .container-last #footer-navigation {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 2%;
+  }
+  .container-last #footer-socials {
+    width: 100%;
+  }
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+}
