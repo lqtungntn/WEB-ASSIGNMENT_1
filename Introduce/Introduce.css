@@ -87,7 +87,9 @@ a:hover {
 .navbar-expand-lg .navbar-nav .nav-link.active {
   color: #e74c3c;
 }
-
+.logo > img {
+  width: 80px;
+}
 /* .btn {
   background-color: #e74c3c;
   color: white;
@@ -156,12 +158,12 @@ a:hover {
     top: 0;
     height: 100%;
     left: 0; */
-.text-inline{
-color: #fff;
-padding-left: auto;
-padding-right: auto;
+.text-inline {
+  color: #fff;
+  padding-left: auto;
+  padding-right: auto;
 }
-.image-size{
+.image-size {
   height: 100%;
   width: 100%;
 }
