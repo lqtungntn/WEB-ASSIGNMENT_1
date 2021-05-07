@@ -18,11 +18,11 @@ ul {
 body {
   margin: 0;
   padding: 0;
-  font-size: 18px;
+  font-size: 18px !important;
   font-family: "Poppins" !important;
-  line-height: 20px;
+  line-height: 20px !important;
   color: #b1b4bd;
-  background-color: #f1faee;
+  background-color: black !important;
   background-repeat: repeat-x;
 }
 
@@ -40,14 +40,6 @@ a:hover {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-/* dropdown menu */
-.dropdown:hover .dropdown-menu {
-  background-color: #f1faee;
-}
-.dropdown:hover .dropdown-menu .dropdown-item:active {
-  background-color: #f44336;
-}
-/* end of drop down menu */
 
 .sticky-nav {
   position: sticky;
@@ -93,7 +85,9 @@ a:hover {
 .logo > img {
   width: 80px;
 }
+
 /*---------------------------------------------------------------------------------------------------------------*/
+
 .contact {
   position: relative;
   min-height: 100vh;
