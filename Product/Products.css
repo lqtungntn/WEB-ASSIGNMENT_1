@@ -26,7 +26,7 @@ a {
 a:hover {
   color: #ef8089;
 }
-
+/*
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -247,21 +247,22 @@ footer {
     padding-top: 15px;
 } */
 
-.container {
+.containerfooter {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 5%;
 }
-.container .customer-column {
+.containerfooter .customer-column {
   width: 23%;
 }
-.container .service-column {
+.containerfooter .service-column {
   width: 23%;
 }
-.container .about-us-column {
+.containerfooter .about-us-column {
   width: 23%;
 }
-.container .customer-column {
+.containerfooter .customer-column {
   width: 23%;
 }
 
@@ -640,7 +641,7 @@ footer .widget ul {
   .video-container #myVideo:hover {
     width: 98%;
   }
-  .container .contact-column {
+  .containerfooter .contact-column {
     width: 60%;
   }
 }
@@ -657,18 +658,22 @@ footer .widget ul {
     justify-content: flex-start;
   }
 
-  .container .customer-column {
+  .containerfooter .customer-column {
     width: 33%;
   }
-  .container .service-column {
+  .containerfooter .service-column {
     width: 33%;
   }
   .container .about-us-column {
     width: 33%;
   }
-  .container .contact-column {
+  .containerfooter .contact-column {
     width: 70%;
   }
+  button
+	{
+		display: none;
+	}
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -690,20 +695,32 @@ footer .widget ul {
       ),
       url(../image/background-new.jpg);
   }
+  button
+	{
+		display: none;
+	}
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  .container .customer-column {
-    width: 50%;
+  button
+	{
+		display: none;
+	}
+  .containerfooter
+  {
+	  padding: 5%;
   }
-  .container .service-column {
-    width: 50%;
+  .containerfooter .customer-column {
+    width: 45%;
   }
-  .container .about-us-column {
-    width: 50%;
+  .containerfooter .service-column {
+    width: 45%;
   }
-  .container .contact-column {
-    width: 50%;
+  .containerfooter .about-us-column {
+    width: 45%;
+  }
+  .containerfooter .contact-column {
+    width: 45%;
   }
   .container-last #footer-navigation {
     width: 100%;

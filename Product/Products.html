@@ -316,7 +316,7 @@
   <div id="waterdrop"></div>
   <footer>
     <div class="footer-top">
-      <div class="container">
+      <div class="containerfooter">
           <div class="customer-column">
             <div class="widget footer_widget">
               <h5 class="footer-title">Khách hàng</h5>
@@ -428,12 +428,20 @@
   <script src="./vendor/counterup/counterup.min.js"></script>
   <script src="./vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="./vendor/venobox/venobox.min.js"></script>
-  <script src="../vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="../vendor/aos/aos.js"></script>
-  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../vendor/php-email-form/validate.js"></script>
-  <script src="../vendor/waypoints/jquery.waypoints.min.js"></script>
+  
   <!-- Template Main JS File -->
   <script src="./vendor/js/main.js"></script>
+  <script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("nav").style.top = "0";
+  } else {
+    document.getElementById("nav").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
 </body>
 </html>
