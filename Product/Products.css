@@ -5,9 +5,10 @@ html {
 #fixed-background {
   position: fixed;
   z-index: -1;
-  height: auto;
-  max-width: 100%;
+  height: 100%;
+  width: 100%;
   vertical-align: middle;
+  background-size: cover;
 }
 
 body {
@@ -40,7 +41,10 @@ a:hover {
   background-color: #f44336;
 }
 /* end of drop down menu */
-
+.portfolio-wrap img
+{
+    border-radius: 3% 3% 8% 8%;
+}
 .sticky-nav {
   position: sticky;
   position: -webkit-sticky;
