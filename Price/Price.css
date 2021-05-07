@@ -948,12 +948,17 @@ footer .widget ul {
 .dropdown {
   display: none;
 }
+.dropdown-2 {
+  display: none;
+}
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   .dropdown {
     display: block;
   }
-
+  .price > #menu {
+    width: 12%;
+  }
   .navbar .container-nav {
     justify-content: flex-start;
   }
@@ -975,11 +980,15 @@ footer .widget ul {
     width: 98%;
   }
   .content > .cost {
-    height: 1000px;
+    height: 1100px;
   }
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  .dropdown-2 {
+    display: block;
+    z-index: 100;
+  }
   .container-2 {
     display: block;
     color: #f1faee;
