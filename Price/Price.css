@@ -211,10 +211,10 @@ PRICE
 #image_os {
   height: auto;
 }
-#image_size {
-  width: 100%;
+.bgtext{
+  background-color: #1c1f2f;
 }
-#bgtext {
+.test{
   background-color: #1c1f2f;
 }
 .content > .cover {
