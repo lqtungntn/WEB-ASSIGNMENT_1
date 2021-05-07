@@ -1,118 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html{
+  scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
 
-.contact {
-  position: relative;
-  min-height: 100vh;
-  padding: 50px 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #1d3557;
-  background-size: cover;
+/*---------------------------------------------HEADER---------------------------------------------------*/
+
+ul {
+  list-style-image: linear-gradient(to left bottom, red, white);
 }
 
-.contact .content {
-  text-align: center;
-  color: #120203;
-  font-weight: 500;
+#fixed-background {
+  position: fixed;
+  opacity: 50%;
+  z-index: -1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
   font-size: 18px;
+  font-family: "Poppins" !important;
+  line-height: 20px;
+  color: #b1b4bd;
+  background-color: #f1faee;
+  background-repeat: repeat-x;
 }
 
-.contact .content h2 {
-  font-size: 36px;
-  font-weight: 500;
-  color: #fff;
-}
-
-.contact .content h2 {
-  font-weight: 300;
-  color: #fff;
-}
-
-/*------------------------------------------Contact Media Effect-------------------------------------*/
-
-.contactConnect {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.contactConnect ul {
-  list-style: none;
-  position: relative;
-  display: inline-block;
-}
-
-.contactConnect ul .text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #ef8089;
-  color: #eee;
-  line-height: 50px;
-  border-radius: 50px;
-  font-size: 22px;
-  pointer-events: none;
-  transition: opacity 0.5s 0.75s ease-out;
-}
-
-.contactConnect ul:hover .text {
-  opacity: 0;
-  transition: opacity 0.5s 0.125s ease-out;
-}
-
-.contactConnect ul li {
-  display: inline-block;
-  height: 50px;
-  width: 50px;
-  background: #ef8089;
-  line-height: 55px;
-  margin: 0 -16px;
-  border-radius: 0px;
-  transition: background-color 0.5s ease-out, border-radius 0.5s 0.25s ease-out,
-    margin 0.5s 0.25s ease-out;
-}
-
-.contactConnect ul li:hover {
-  background: #e63746;
-}
-
-.contactConnect ul li a i {
-  color: #eee;
-  font-size: 22px;
-  opacity: 0;
-  transition: opacity 1.7s;
-}
-
-.contactConnect ul:hover li a i {
-  opacity: 1;
-}
-
-.contactConnect ul li:nth-child(1) {
-  border-bottom-left-radius: 25px;
-  border-top-left-radius: 25px;
-}
-
-.contactConnect ul li:nth-child(4) {
-  border-bottom-right-radius: 25px;
-  border-top-right-radius: 25px;
-}
-
-.contactConnect ul:hover li {
-  border-radius: 50px;
-  margin: 0 3px;
-}
-/* Header */
 a {
   color: #b1b4bd;
   font-weight: 500;
@@ -180,8 +93,114 @@ a:hover {
 .logo > img {
   width: 80px;
 }
+/*---------------------------------------------------------------------------------------------------------------*/
+.contact {
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1d3557;
+  background-size: cover;
+}
+
+.contact .content {
+  text-align: center;
+  color: #120203;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.contact .content h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.contact .content h2 {
+  font-weight: 300;
+  color: #fff;
+}
+
+/*------------------------------------------Contact Media Effect-------------------------------------*/
+
+.contactConnect{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contactConnect ul{
+  list-style: none;
+  position: relative;
+  display: inline-block;
+}
+
+.contactConnect ul .text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ef8089;
+  color: #eee;
+  line-height: 50px;
+  border-radius: 50px;
+  font-size: 22px;
+  pointer-events: none;
+  transition: opacity .5s .75s ease-out;
+}
+
+.contactConnect ul:hover .text{
+  opacity: 0;
+  transition: opacity .5s .125s ease-out;
+}
+
+.contactConnect ul li{
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  background: #ef8089;
+  line-height: 55px;
+  margin: 0 -16px;
+  border-radius: 0px;
+  transition: background-color .5s ease-out, border-radius .5s .25s ease-out, margin .5s .25s ease-out;
+}
+
+.contactConnect ul li:hover{
+  background: #e63746;
+}
+
+.contactConnect ul li a i{
+  color: #eee;
+  font-size: 22px;
+  opacity: 0;
+  transition: opacity 1.7s;
+}
+
+.contactConnect ul:hover li a i{
+  opacity: 1;
+}
+
+.contactConnect ul li:nth-child(1){
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.contactConnect ul li:nth-child(4){
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.contactConnect ul:hover li{
+  border-radius: 50px;
+  margin: 0 3px;
+}
+
 /*----------------------------------------Contacts Info -----------------------------------------*/
-.container {
+.container-body {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -189,7 +208,7 @@ a:hover {
   margin-top: 30px;
 }
 
-.container-info {
+.container-info{
   position: relative;
   width: 550px;
   display: flex;
@@ -199,7 +218,7 @@ a:hover {
   margin: 20px 0;
 }
 
-.container-info .box {
+.container-info .box{
   position: relative;
   width: 300px;
   height: 150px;
@@ -208,7 +227,7 @@ a:hover {
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.05);
 }
 
-.container-info .box .imgBx {
+.container-info .box .imgBx{
   position: absolute;
   top: 0;
   left: 0;
@@ -221,16 +240,16 @@ a:hover {
   transition-delay: 0.5s;
 }
 
-.container-info .box:hover .imgBx {
+.container-info .box:hover .imgBx{
   transform: scale(0);
   transition-delay: 0s;
 }
 
-.container-info .box .imgBx img {
+.container-info .box .imgBx img{
   max-width: 50px;
 }
 
-.container-info .box .content-info {
+.container-info .box .content-info{
   position: relative;
   top: 0;
   left: 0;
@@ -248,25 +267,25 @@ a:hover {
   transition-delay: 0s;
 }
 
-.container-info .box:hover .content-info {
+.container-info .box:hover .content-info{
   transform: scale(1);
   transition-delay: 0.5s;
 }
 
-.container-info .box:nth-child(2) .content-info {
+.container-info .box:nth-child(2) .content-info{
   background: #2ba1ff;
 }
 
-.container-info .box:nth-child(3) .content-info {
+.container-info .box:nth-child(3) .content-info{
   background: #c630e0;
 }
 
-.container-info .box .content-info .icon img {
+.container-info .box .content-info .icon img{
   max-width: 50px;
   filter: invert(1);
 }
 
-.container-info .box .content-info h3 {
+.container-info .box .content-info h3{
   color: #fff;
   text-transform: uppercase;
   font-size: 16px;
@@ -274,7 +293,7 @@ a:hover {
   margin-top: 20px;
 }
 
-.container-info .box .content-info p {
+.container-info .box .content-info p{
   color: #fff;
   font-size: 16px;
   font-weight: 500;
@@ -365,7 +384,7 @@ a:hover {
 
 /*-----------------------------------------------Effect Button--------------------------------*/
 
-.contactForm .effect-submit {
+.contactForm .effect-submit{
   display: flex;
 }
 
@@ -457,7 +476,7 @@ a:hover {
   .container {
     flex-direction: column;
   }
-  .container .contactInfo {
+  .container-body .contactInfo {
     margin-bottom: 40px;
   }
   .container .contactInfo,
@@ -468,99 +487,13 @@ a:hover {
 }
 
 /*--------------------------------FOOTER---------------------------------------------------*/
-/*--------------------------------FOOTER - TOP---------------------------------------------------*/
-
-#footer {
-  background-color: #1c1c1c;
-}
-
-#footer .footer-top {
-  color: #8a92a2;
-  text-align: center;
-  padding: 30px 80px;
-}
-
-#footer .footer-top h4 {
-  font-size: 18px;
-}
-
-#footer .footer-top .footer-phone {
-  display: inline-block;
-  padding-top: 15px;
-  font-size: 32px;
-}
-
-#footer .footer-top p {
-  padding: 10px 0;
-}
-
-#footer .footer-top ul {
-  display: flex;
+.page-wrapper {
+  position: relative;
+  bottom: 0;
   width: 100%;
-  list-style-type: none;
+  z-index: 11111;
+  top: 35px;
 }
-
-#footer .footer-top ul li {
-  flex: 50%;
-  text-align: center;
-  transition: all 0.5s;
-}
-
-#footer .footer-top ul .icon-fa > i {
-  background-color: #34a853;
-  color: #fff;
-  font-size: 23px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  margin-bottom: 10px;
-  border-radius: 50%;
-  transition: 0.5s;
-}
-
-#footer .footer-top ul .icon-fa > a {
-  color: #34a853;
-  text-decoration: none;
-  font-size: 25px;
-  transition: 0.5s;
-}
-
-#footer .footer-top ul .icon-fa > a:hover {
-  color: #3767a9;
-}
-
-#footer .footer-top ul .icon-fa > span.info-name {
-  display: block;
-  color: #969696;
-  font-size: 15px;
-}
-
-@media only screen and (max-width: 767px) {
-  #footer .footer-top {
-    padding: 0;
-    padding-bottom: 20px;
-  }
-  #footer .footer-top ul {
-    flex-direction: column;
-  }
-  #footer .footer-top ul .icon-fa > a,
-  #footer .footer-top ul .icon-fa > span.info-name {
-    width: 100%;
-    text-align: center;
-    font-size: 13px;
-  }
-
-  #footer .footer-top ul .icon-fa > i {
-    width: 100%;
-    text-align: center;
-    font-size: 13px;
-    width: 40px;
-    height: 40px;
-  }
-}
-
-/*--------------------------------FOOTER - INFO---------------------------------------------------*/
 
 footer p,
 footer strong,
