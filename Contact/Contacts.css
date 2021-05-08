@@ -1,4 +1,4 @@
-html{
+html {
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
@@ -120,20 +120,20 @@ a:hover {
 
 /*------------------------------------------Contact Media Effect-------------------------------------*/
 
-.contactConnect{
+.contactConnect {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-.contactConnect ul{
+.contactConnect ul {
   list-style: none;
   position: relative;
   display: inline-block;
 }
 
-.contactConnect ul .text{
+.contactConnect ul .text {
   position: absolute;
   top: 0;
   left: 0;
@@ -145,15 +145,15 @@ a:hover {
   border-radius: 50px;
   font-size: 22px;
   pointer-events: none;
-  transition: opacity .5s .75s ease-out;
+  transition: opacity 0.5s 0.75s ease-out;
 }
 
-.contactConnect ul:hover .text{
+.contactConnect ul:hover .text {
   opacity: 0;
-  transition: opacity .5s .125s ease-out;
+  transition: opacity 0.5s 0.125s ease-out;
 }
 
-.contactConnect ul li{
+.contactConnect ul li {
   display: inline-block;
   height: 50px;
   width: 50px;
@@ -161,35 +161,46 @@ a:hover {
   line-height: 55px;
   margin: 0 -16px;
   border-radius: 0px;
-  transition: background-color .5s ease-out, border-radius .5s .25s ease-out, margin .5s .25s ease-out;
+  transition: background-color 0.5s ease-out, border-radius 0.5s 0.25s ease-out,
+    margin 0.5s 0.25s ease-out;
 }
-
-.contactConnect ul li:hover{
+.contactConnect ul li:nth-child(5) {
+  display: inline-block;
+  height: 0px;
+  width: 0px;
+  background: #ef8089;
+  line-height: 0px;
+  margin: 0 0px;
+  border-radius: 0px;
+  transition: background-color 0.5s ease-out, border-radius 0.5s 0.25s ease-out,
+    margin 0.5s 0.25s ease-out;
+}
+.contactConnect ul li:hover {
   background: #e63746;
 }
 
-.contactConnect ul li a i{
+.contactConnect ul li a i {
   color: #eee;
   font-size: 22px;
   opacity: 0;
   transition: opacity 1.7s;
 }
 
-.contactConnect ul:hover li a i{
+.contactConnect ul:hover li a i {
   opacity: 1;
 }
 
-.contactConnect ul li:nth-child(1){
+.contactConnect ul li:nth-child(1) {
   border-bottom-left-radius: 25px;
   border-top-left-radius: 25px;
 }
 
-.contactConnect ul li:nth-child(4){
+.contactConnect ul li:nth-child(4) {
   border-bottom-right-radius: 25px;
   border-top-right-radius: 25px;
 }
 
-.contactConnect ul:hover li{
+.contactConnect ul:hover li {
   border-radius: 50px;
   margin: 0 3px;
 }
@@ -203,7 +214,7 @@ a:hover {
   margin-top: 30px;
 }
 
-.container-info{
+.container-info {
   position: relative;
   width: 550px;
   display: flex;
@@ -213,7 +224,7 @@ a:hover {
   margin: 20px 0;
 }
 
-.container-info .box{
+.container-info .box {
   position: relative;
   width: 300px;
   height: 150px;
@@ -222,7 +233,7 @@ a:hover {
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.05);
 }
 
-.container-info .box .imgBx{
+.container-info .box .imgBx {
   position: absolute;
   top: 0;
   left: 0;
@@ -235,16 +246,16 @@ a:hover {
   transition-delay: 0.5s;
 }
 
-.container-info .box:hover .imgBx{
+.container-info .box:hover .imgBx {
   transform: scale(0);
   transition-delay: 0s;
 }
 
-.container-info .box .imgBx img{
+.container-info .box .imgBx img {
   max-width: 50px;
 }
 
-.container-info .box .content-info{
+.container-info .box .content-info {
   position: relative;
   top: 0;
   left: 0;
@@ -262,25 +273,25 @@ a:hover {
   transition-delay: 0s;
 }
 
-.container-info .box:hover .content-info{
+.container-info .box:hover .content-info {
   transform: scale(1);
   transition-delay: 0.5s;
 }
 
-.container-info .box:nth-child(2) .content-info{
+.container-info .box:nth-child(2) .content-info {
   background: #2ba1ff;
 }
 
-.container-info .box:nth-child(3) .content-info{
+.container-info .box:nth-child(3) .content-info {
   background: #c630e0;
 }
 
-.container-info .box .content-info .icon img{
+.container-info .box .content-info .icon img {
   max-width: 50px;
   filter: invert(1);
 }
 
-.container-info .box .content-info h3{
+.container-info .box .content-info h3 {
   color: #fff;
   text-transform: uppercase;
   font-size: 16px;
@@ -288,7 +299,7 @@ a:hover {
   margin-top: 20px;
 }
 
-.container-info .box .content-info p{
+.container-info .box .content-info p {
   color: #fff;
   font-size: 16px;
   font-weight: 500;
@@ -379,7 +390,7 @@ a:hover {
 
 /*-----------------------------------------------Effect Button--------------------------------*/
 
-.contactForm .effect-submit{
+.contactForm .effect-submit {
   display: flex;
 }
 
@@ -480,6 +491,11 @@ a:hover {
   .contactConnect {
     width: 100%;
   }
+}
+
+#map iframe {
+  width: 100%;
+  height: auto;
 }
 
 /*--------------------------------FOOTER---------------------------------------------------*/
