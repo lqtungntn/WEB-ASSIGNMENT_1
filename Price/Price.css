@@ -149,6 +149,12 @@ PRICE
   left: 0;
   z-index: 1000; /*Hiển thị lớp trên cùng*/
 }
+.dropdown-2 {
+}
+
+.dropdown-2 .btn-secondary {
+  background-color: #2e2e4c;
+}
 
 #menu ul {
   background-color: rgba(12, 32, 59, 0.5);
@@ -211,10 +217,10 @@ PRICE
 #image_os {
   height: auto;
 }
-.bgtext{
+.bgtext {
   background-color: #1c1f2f;
 }
-.test{
+.test {
   background-color: #1c1f2f;
 }
 .content > .cover {
@@ -953,6 +959,15 @@ footer .widget ul {
 }
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+  .dropdown-2 {
+    display: block;
+    z-index: 100;
+  }
+
+  .price > #menu {
+    display: none;
+  }
+
   .dropdown {
     display: block;
   }
@@ -985,10 +1000,6 @@ footer .widget ul {
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  .dropdown-2 {
-    display: block;
-    z-index: 100;
-  }
   .container-2 {
     display: block;
     color: #f1faee;
