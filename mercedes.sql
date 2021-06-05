@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 05, 2021 lúc 07:37 AM
+-- Thời gian đã tạo: Th6 05, 2021 lúc 10:56 AM
 -- Phiên bản máy phục vụ: 10.4.18-MariaDB
 -- Phiên bản PHP: 8.0.5
 
@@ -45,7 +45,12 @@ CREATE TABLE `contact` (
   `PhoneNum` varchar(20) CHARACTER SET utf8 NOT NULL,
   `Email` varchar(50) CHARACTER SET utf8 NOT NULL,
   `Facebook` varchar(50) CHARACTER SET utf8 NOT NULL,
-  `LastChangedBy` int(11) DEFAULT NULL
+  `LastChangedBy` int(11) DEFAULT NULL,
+  `Twitter` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `Reddit` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `Youtube` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `Instagram` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `Telegram` varchar(50) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
