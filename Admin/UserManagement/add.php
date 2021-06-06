@@ -5,8 +5,18 @@ session_start();
 
 
 //validate-------------------------------------
-$idErr=$nameErr=$yearErr="";
+$idErr=$nameErr=$phoneNumErr="";
 
+ //id
+ if (empty($_POST["id"])) {
+	$idErr = "Id is required";
+  } else {
+	$id = $_POST["id"];
+	if (!is_numeric($id)) {
+	  $idErr = "Must be an integer";
+	}
+  }
+  //name
 if (empty($_POST["name"])) {
 	$nameErr = "Name is required";
   } else {
@@ -16,48 +26,54 @@ if (empty($_POST["name"])) {
 	if (strlen($name)<5 || strlen($name)>40) {
 	  $nameErr = "just from 5 to 40 characters";
 	}
-  }
-  //id
-  if (empty($_POST["id"])) {
-	$idErr = "Id is required";
-  } else {
-	$id = $_POST["id"];
-	if (!is_numeric($id)) {
-	  $idErr = "Must be an integer";
-	}
-  }
-  //year
-  if (empty($_POST["year"])) {
-	$yearErr = "Year is required";
+  }		
+//   //year
+//   if (empty($_POST["year"])) {
+// 	$yearErr = "Year is required";
+//   } else {
+// 	// $name = test_input($_POST["name"]);
+// 	// check if name only contains letters and whitespace
+// 	$year = $_POST["year"];
+// 	if ($year<1990 || $year>2015) {
+// 	  $yearErr = "Must be between 1990-2015";
+// 	}
+//   }
+
+  //phoneNum
+  if (empty($_POST["phoneNum"])) {
+	$yearErr = "phoneNum is required";
   } else {
 	// $name = test_input($_POST["name"]);
 	// check if name only contains letters and whitespace
-	$year = $_POST["year"];
-	if ($year<1990 || $year>2015) {
-	  $yearErr = "Must be between 1990-2015";
+	$phoneNum = $_POST["phoneNum"];
+	if (!is_numeric($phoneNum)) {
+	  $yearErr = "Just only include number";
 	}
   }
 
+
+
+
 //----------------------------------------------------------------------
-if($idErr =="" && $nameErr== "" && $yearErr== "") {
-  $sql = "INSERT INTO cars (id,name,year) VALUES ('" . $id . "','" . $name . "','" . $year . "')";
+if($idErr =="" && $nameErr== "" && $phoneNumErr== "") {
+  $sql = "INSERT INTO user (ID,Fullname,PhoneNum) VALUES ('" . $id . "','" . $name . "','" . $phoneNum . "')";
   $faq_id = $db_handle->executeInsert($sql);
 	if(!empty($faq_id)) {
-		$sql = "SELECT * from cars WHERE id = '$faq_id' ";
-		$cars = $db_handle->runSelectQuery($sql);
+		$sql = "SELECT * from user WHERE id = '$faq_id' ";
+		$user = $db_handle->runSelectQuery($sql);
 	}
 ?>
-<tr class="table-row" id="table-row-<?php echo $cars[0]["id"]; ?>">
-<td contenteditable="true" onBlur="saveToDatabase(this,'id','<?php echo $cars[0]["id"]; ?>')" onClick="editRow(this);"><?php echo $idErr; ?></td>
-<td contenteditable="true" onBlur="saveToDatabase(this,'name','<?php echo $cars[0]["id"]; ?>')" onClick="editRow(this);"><?php echo $nameErr; ?></td>
-<td contenteditable="true" onBlur="saveToDatabase(this,'year','<?php echo $cars[0]["id"]; ?>')" onClick="editRow(this);"><?php echo $yearErr; ?></td>
-<td><a class="ajax-action-links" onclick="deleteRecord(<?php echo $cars[0]["id"]; ?>);">Delete</a></td>
+<tr class="table-row" id="table-row-<?php echo $user[0]["id"]; ?>">
+<td><?php echo $idErr; ?><?php echo $id?></td>
+<td><?php echo $nameErr; ?><?php echo $name?></td>
+<td><?php echo $phoneNumErr; ?><?php echo $phoneNum?></td>
+<td><a class="ajax-action-links" onclick="deleteRecord(<?php echo $user[0]["ID"]; ?>);">Delete</a></td>
 </tr>  
 <?php } ?>
 
-<tr class= "error" class="table-row" id="table-row-<?php echo $cars[0]["id"]; ?>">
+<tr class= "error" class="table-row" id="table-row-<?php echo $user[0]["id"]; ?>">
 <td><?php echo $idErr; ?></td>
 <td><?php echo $nameErr; ?></td>
-<td><?php echo $yearErr; ?></td>
+<td><?php echo $phoneNumErr; ?></td>
 <td></td>
 </tr> 
