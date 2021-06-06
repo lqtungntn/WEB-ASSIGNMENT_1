@@ -138,9 +138,9 @@ a:hover {
   top: 0;
   left: 0;
   right: 0;
-  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
-  color: black;
-  margin-left: 20px;
+  background: #ef8089;
+  color: #eee;
+  margin-left: 40px;
   line-height: 50px;
   border-radius: 50px;
   font-size: 22px;
@@ -164,17 +164,19 @@ a:hover {
   transition: background-color 0.5s ease-out, border-radius 0.5s 0.25s ease-out,
     margin 0.5s 0.25s ease-out;
 }
-
-.contactConnect ul li:nth-child(7) {
+.contactConnect ul li:nth-child(5) {
   display: inline-block;
   height: 0px;
-  width: 20px;
+  width: 0px;
   background: #ef8089;
   line-height: 0px;
   margin: 0 0px;
-  border-radius: 50px;
+  border-radius: 0px;
   transition: background-color 0.5s ease-out, border-radius 0.5s 0.25s ease-out,
     margin 0.5s 0.25s ease-out;
+}
+.contactConnect ul li:hover {
+  background: #e63746;
 }
 
 .contactConnect ul li a i {
@@ -193,7 +195,7 @@ a:hover {
   border-top-left-radius: 25px;
 }
 
-.contactConnect ul li:nth-child(6) {
+.contactConnect ul li:nth-child(4) {
   border-bottom-right-radius: 25px;
   border-top-right-radius: 25px;
 }
@@ -203,33 +205,6 @@ a:hover {
   margin: 0 3px;
 }
 
-.contactConnect ul li:nth-child(1){
-  background-color: rgb(23, 117, 241);
-}
-
-.contactConnect ul li:nth-child(2){
-  background-color: rgb(27, 153, 238);
-}
-
-.contactConnect ul li:nth-child(3){
-  background: #f09433; 
-  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
-}
-
-.contactConnect ul li:nth-child(4){
-  background-color: rgb(254, 67, 0);
-}
-
-.contactConnect ul li:nth-child(5){
-  background-color: rgb(32, 157, 215);
-}
-
-.contactConnect ul li:nth-child(6){
-  background-color: red;
-}
 /*----------------------------------------Contacts Info -----------------------------------------*/
 .container-body {
   width: 100%;
@@ -422,7 +397,8 @@ a:hover {
 .contactForm .effect-submit a {
   position: relative;
   display: inline-block;
-  color: black;
+  padding: 15px 30px;
+  color: #ef8089;
   text-transform: uppercase;
   letter-spacing: 4px;
   text-decoration: none;
@@ -435,8 +411,7 @@ a:hover {
 .contactForm .effect-submit a:hover {
   color: #120203;
   background: #ef8089;
-  box-shadow: 0 0 10px #00C0FF, 0 0 20px #FFCF00, 0 0 40px #FC4F4F, 0 0 80px #00C0FF;
-  background: linear-gradient(90deg, #00C0FF 0%, #FFCF00 33%, #FC4F4F 66%, #00C0FF 100%);
+  box-shadow: 0 0 10px #ef8089, 0 0 40px #ef8089, 0 0 80px #ef8089;
   transition-delay: 1s;
 }
 
@@ -450,7 +425,7 @@ a:hover {
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, #00C0FF 0%, #FFCF00 33%, #FC4F4F 66%, #00C0FF 100%);
+  background: linear-gradient(90deg, transparent, #ef8089);
 }
 
 .contactForm .effect-submit a:hover span:nth-child(1) {
@@ -463,7 +438,7 @@ a:hover {
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, #00C0FF 0%, #FFCF00 33%, #FC4F4F 66%, #00C0FF 100%);
+  background: linear-gradient(270deg, transparent, #ef8089);
 }
 
 .contactForm .effect-submit a:hover span:nth-child(3) {
@@ -477,7 +452,7 @@ a:hover {
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(90deg, #00C0FF 0%, #FFCF00 33%, #FC4F4F 66%, #00C0FF 100%);
+  background: linear-gradient(180deg, transparent, #ef8089);
 }
 
 .contactForm .effect-submit a:hover span:nth-child(2) {
@@ -491,20 +466,13 @@ a:hover {
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(90deg, #00C0FF 0%, #FFCF00 33%, #FC4F4F 66%, #00C0FF 100%);
+  background: linear-gradient(360deg, transparent, #ef8089);
 }
 
 .contactForm .effect-submit a:hover span:nth-child(4) {
   bottom: 100%;
   transition: 1s;
   transition-delay: 0.75s;
-}
-
-.contactForm .effect-submit input[type="submit"]{
-  background: linear-gradient(90deg, #00C0FF 0%, #FFCF00 33%, #FC4F4F 66%, #00C0FF 100%);
-  border: none;
-  width: 125px;
-  height: 60px;
 }
 
 @media (max-width: 1199px) {
@@ -706,28 +674,22 @@ a.socials-item {
   text-rendering: auto;
 }
 
-.facebook{
-  color: rgb(23, 117, 241);
+.facebook {
+  color: #4e64b5;
 }
 
-.twitter{
-  color: rgb(27, 153, 238);
+.twitter {
+  color: #00aced;
+}
+.instagram {
+  color: #9a8f62;
+}
+.youtube {
+  color: #c82929;
 }
 
-.instagram{
-  color: #f09433; 
-}
-
-.reddit{
-  color: rgb(254, 67, 0);
-}
-
-.telegram{
-  color: rgb(32, 157, 215);
-}
-
-.youtube{
-  color: red;
+.telegram {
+  color: #2ca5e0;
 }
 
 a.socials-item:hover {
@@ -818,7 +780,7 @@ footer p:hover {
 
 .wpcf7 .wpcf7-form .contact-form-footer textarea {
   color: white;
-  height: 100px;
+  height: 160px;
   width: 100%;
 }
 

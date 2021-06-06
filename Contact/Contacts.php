@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="vi">
   <head>
@@ -11,33 +14,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  
     </head>
-    <?php
-      include 'connection.php';
-
-      $sql = "SELECT Address, PhoneNum, Email, Facebook, Twitter, Reddit, Youtube, Instagram, Telegram FROM contact";
-      $result = mysqli_query($conn, $sql);
-      mysqli_set_charset($conn, "utf8");
-
-      while($row = mysqli_fetch_assoc($result)) {
-        $Address = array(); array_push($Address, $row['Address']);
-        $PhoneNum = array(); array_push($PhoneNum, $row['PhoneNum']);
-        $Email = array(); array_push($Email, $row['Email']);
-        $Facebook = array(); array_push($Facebook, $row['Facebook']);
-        $Twitter = array(); array_push($Twitter, $row['Twitter']);
-        $Reddit = array(); array_push($Reddit, $row['Reddit']);
-        $Youtube = array(); array_push($Youtube, $row['Youtube']);
-        $Instagram = array(); array_push($Instagram, $row['Instagram']);
-        $Telegram = array(); array_push($Telegram, $row['Telegram']);
-        
-      }
-    ?>
     <body>
         <!-- Header -->
         <div class="header-background">
         <div id="nav" class="sticky-nav">
             <nav class="navbar navbar-expand-lg ">
               <div class="container">
-                <a class="navbar-brand" href="../Home/Home.html">
+                <a class="navbar-brand" href="../Home/Home.php">
                   Mercedes
                 </a>
                 <div class="dropdown">
@@ -45,31 +28,40 @@
                     <i class="fa fa-bars"></i>
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" aria-current="page" href="../Home/Home.html">Trang chủ</a>
-                    <a class="dropdown-item" aria-current="page" href="../Introduce/Introduce.html">Giới thiệu</a>
-                    <a class="dropdown-item" aria-current="page" href="../Product/Products.html">Sản phẩm</a>
-                    <a class="dropdown-item" aria-current="page" href="../Price/Pricea200.html">Bảng giá</a>
-                    <a href="../Contact/Contacts.html" class="dropdown-item" aria-current="page">Liên hệ</a>
-      
+                    <a class="dropdown-item" aria-current="page" href="../Home/Home.php">Trang chủ</a>
+                    <a class="dropdown-item" aria-current="page" href="../Introduce/Introduce.php">Giới thiệu</a>
+                    <a class="dropdown-item" aria-current="page" href="../Product/Products.php">Sản phẩm</a>
+                    <a class="dropdown-item" aria-current="page" href="../Price/Pricea200.php">Bảng giá</a>
+                    <a href="../Contact/Contacts.php" class="dropdown-item" aria-current="page">Liên hệ</a>
+                    <a class="dropdown-item" href="../account/index.php" class="nav-link" aria-current="page">
+                      <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo "Trang cá nhân";
+                            else echo "Đăng nhập"; ?>
+                    </a>
                   </div>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
                     <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="../Home/Home.html">Trang chủ</a>
+                      <a class="nav-link" aria-current="page" href="../Home/Home.php">Trang chủ</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="../Introduce/Introduce.html">Giới thiệu</a>
+                      <a class="nav-link" aria-current="page" href="../Introduce/Introduce.php">Giới thiệu</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="../Product/Products.html">Sản phẩm</a>
+                      <a class="nav-link" aria-current="page" href="../Product/Products.php">Sản phẩm</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="../Price/Pricea200.html">Bảng giá</a>
+                      <a class="nav-link" aria-current="page" href="../Price/Pricea200.php">Bảng giá</a>
                     </li>
                     <li class="nav-item">
-                      <a href="../Contact/Contacts.html" class="nav-link active" aria-current="page">Liên hệ</a>
+                      <a href="../Contact/Contacts.php" class="nav-link active" aria-current="page">Liên hệ</a>
                     </li>
+                    <li class="nav-item">
+                    <a href="../account/index.php" class="nav-link" aria-current="page">
+                      <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo "Trang cá nhân";
+                            else echo "Đăng nhập"; ?>
+                    </a>                    </li>
+                    
                   </ul>
                 </div>
                 <!--<div class="logo"><img class="logo" src="../image/logo.png" alt=""></div>-->
@@ -96,13 +88,7 @@
                                     <img src="../Contact/map.png" alt="map">
                                 </div>
                                 <h3>Địa Chỉ</h3>
-                                <p>
-                                  <?php
-                                    for ($i = 0; $i < sizeof($Address); $i++){
-                                      echo $Address[$i]."<br>";
-                                    }
-                                  ?>
-                                </p>
+                                <p>68 Dịch Vọng Cầu Giấy Hà Nội</p>
                             </div>
                         </div>
                         <div class="box">
@@ -114,13 +100,7 @@
                                     <img src="../Contact/phone.png" alt="phone">
                                 </div>
                                 <h3>Số Điện Thoại</h3>
-                                <p>
-                                  <?php
-                                    for ($i = 0; $i < sizeof($PhoneNum); $i++){
-                                      echo $PhoneNum[$i]."<br>";
-                                    }
-                                  ?>
-                                </p>
+                                <p>0932968998</p>
                             </div>
                         </div>
                         <div class="box">
@@ -132,54 +112,46 @@
                                     <img src="../Contact/email.png" alt="email">
                                 </div>
                                 <h3>Email</h3>
-                                <p>
-                                  <?php
-                                    for ($i = 0; $i < sizeof($Email); $i++){
-                                      echo $Email[$i]."<br>";
-                                    }
-                                  ?>
-                                </p>
+                                <p>conghoanguyen98@gmail.com</p>
                             </div>
                         </div>
                     </div>
                     <div class="contactConnect">
                         <ul>
-                            <li><a href="<?php for ($i = 0; $i < sizeof($Facebook); $i++) echo $Facebook[$i]; ?>"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-                            <li><a href="<?php for ($i = 0; $i < sizeof($Twitter); $i++) echo $Twitter[$i]; ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="<?php for ($i = 0; $i < sizeof($Instagram); $i++) echo $Instagram[$i]; ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href="<?php for ($i = 0; $i < sizeof($Reddit); $i++) echo $Reddit[$i]; ?>"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
-                            <li><a href="<?php for ($i = 0; $i < sizeof($Telegram); $i++) echo $Telegram[$i]; ?>"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
-                            <li><a href="<?php for ($i = 0; $i < sizeof($Youtube); $i++) echo $Youtube[$i]; ?>"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                            <li><a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                            <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href=""><i class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
                             <li><a href=""><p class="text">Follow</p></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="contactForm">
-                    <form action="" method="post">
+                    <form>
                         <h2>Gửi Tin Nhắn</h2>
                         <div class="inputBox">
-                            <input type="text" required="required" name="contactForm-name"/>
+                            <input type="text" required="required">
                             <span>Họ và Tên</span>
                         </div>
                         <div class="inputBox">
-                            <input type="number" required="required" name="contactForm-phone"/>
+                            <input type="number" required="required">
                             <span>Số Điện Thoại</span>
                         </div>
                         <div class="inputBox">
-                            <input type="text" required="required" name="contactForm-email"/>
+                            <input type="text" required="required">
                             <span>Email</span>
                         </div>
                         <div class="inputBox">
-                            <textarea required="required" name="contactForm-message"></textarea>
+                            <textarea required="required"></textarea>
                             <span>Tin nhắn muốn gửi...</span>
                         </div>
-                        <div class="effect-submit" name="submit" id="effect-submit">
+                        <div class="effect-submit">
                             <a href="">
                                 <span></span>
                                 <span></span>
                                 <span></span>
                                 <span></span>
-                                <input type="submit" name="submit" value="Send"/>
+                                Send
                             </a>
                         </div>
                     </form>
@@ -191,17 +163,8 @@
                  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
-        <?php
-          if (isset($_POST['submit'])){
-            $name = $_POST['contactForm-name'];
-            $phone = $_POST['contactForm-phone'];
-            $email = $_POST['contactForm-email'];
-            $message = $_POST['contactForm-message'];
 
-            mail($Email, "This is my Subject", $name."\n".$phone."\n".$email."\n".$message);
-          }
-        ?>
-          <!-- footer -->
+        <!-- footer -->
 
 
         <div class="page-wrapper">
@@ -254,9 +217,8 @@
                             <form method="post" class="wpcf7-form" novalidate="novalidate">
           
                               <div class="contact-form-footer">
-                                <p><span class="wpcf7-form-control-wrap your-first-name"><input type="text" name="your-first-name" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Họ và tên"></span></p>
-                                <p><span class="wpcf7-form-control-wrap your-email_1"><input type="email" name="your-email_1" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="Số điện thoại"></span></p>
-                                <p><span class="wpcf7-form-control-wrap your-email_1"><input type="email" name="your-email_1" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="Email"></span></p>
+                                <p><span class="wpcf7-form-control-wrap your-first-name"><input type="text" name="your-first-name" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Your name"></span></p>
+                                <p><span class="wpcf7-form-control-wrap your-email_1"><input type="email" name="your-email_1" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="Your email"></span></p>
                                 <p><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your message"></textarea></span></p>
                                 <div><input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></div>
                               </div>
@@ -281,23 +243,21 @@
                       <div id="footer-socials">
                         <div class="socials inline-inside socials-colored">
           
-                          <a href="<?php for ($i = 0; $i < sizeof($Facebook); $i++) echo $Facebook[$i]; ?>" target="_blank" title="Facebook" class="socials-item facebook">
+                          <a href="#" target="_blank" title="Facebook" class="socials-item facebook">
                             <i class="fa fa-facebook-official" aria-hidden="true"></i>
                           </a>
-                          <a href="<?php for ($i = 0; $i < sizeof($Twitter); $i++) echo $Twitter[$i]; ?>" target="_blank" title="Twitter" class="socials-item twitter">
+                          <a href="#" target="_blank" title="Twitter" class="socials-item twitter">
                             <i class="fa fa-twitter-square" aria-hidden="true"></i>
+          
                           </a>
-                          <a href="<?php for ($i = 0; $i < sizeof($Instagram); $i++) echo $Instagram[$i]; ?>" target="_blank" title="Instagram" class="socials-item instagram">
+                          <a href="#" target="_blank" title="Instagram" class="socials-item instagram">
                             <i class="fa fa-instagram" aria-hidden="true"></i>
                           </a>
-                          <a href="<?php for ($i = 0; $i < sizeof($Reddit); $i++) echo $Reddit[$i]; ?>" target="_blank" title="Reddit" class="socials-item reddit">
-                            <i class="fa fa-reddit-alien" aria-hidden="true"></i>
-                          </a>
-                          <a href="<?php for ($i = 0; $i < sizeof($Telegram); $i++) echo $Telegram[$i]; ?>" target="_blank" title="Telegram" class="socials-item telegram">
-                            <i class="fa fa-telegram" aria-hidden="true"></i>
-                          </a>
-                          <a href="<?php for ($i = 0; $i < sizeof($Youtube); $i++) echo $Youtube[$i]; ?>" target="_blank" title="YouTube" class="socials-item youtube">
+                          <a href="#" target="_blank" title="YouTube" class="socials-item youtube">
                             <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                          </a>
+                          <a href="#" target="_blank" title="Telegram" class="socials-item telegram">
+                            <i class="fa fa-telegram" aria-hidden="true"></i>
                           </a>
                         </div>
                       </div>
