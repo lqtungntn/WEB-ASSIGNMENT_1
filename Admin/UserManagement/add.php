@@ -5,7 +5,7 @@ session_start();
 
 
 //validate-------------------------------------
-$idErr=$nameErr=$phoneNumErr="";
+$idErr=$nameErr=$phoneNumErr=$emailErr=$usernameErr=$passwordErr="";
 
  //id
  if (empty($_POST["id"])) {
@@ -41,22 +41,28 @@ if (empty($_POST["name"])) {
 
   //phoneNum
   if (empty($_POST["phoneNum"])) {
-	$yearErr = "phoneNum is required";
+	$phoneNumErr = "phoneNum is required";
   } else {
 	// $name = test_input($_POST["name"]);
 	// check if name only contains letters and whitespace
 	$phoneNum = $_POST["phoneNum"];
 	if (!is_numeric($phoneNum)) {
-	  $yearErr = "Just only include number";
+	  $phoneNumErr = "Just only include number";
 	}
   }
+
+  //has not validate yet
+  $email = $_POST["email"];
+  $username = $_POST["username"];
+  $password = $_POST["password"];
+
 
 
 
 
 //----------------------------------------------------------------------
 if($idErr =="" && $nameErr== "" && $phoneNumErr== "") {
-  $sql = "INSERT INTO user (ID,Fullname,PhoneNum) VALUES ('" . $id . "','" . $name . "','" . $phoneNum . "')";
+  $sql = "INSERT INTO user (ID,Fullname,PhoneNum,Email,Username,Password) VALUES ('" . $id . "','" . $name . "','" . $phoneNum . "','" . $email . "','" . $username . "','" . $password . "')";
   $faq_id = $db_handle->executeInsert($sql);
 	if(!empty($faq_id)) {
 		$sql = "SELECT * from user WHERE id = '$faq_id' ";
@@ -64,9 +70,12 @@ if($idErr =="" && $nameErr== "" && $phoneNumErr== "") {
 	}
 ?>
 <tr class="table-row" id="table-row-<?php echo $user[0]["id"]; ?>">
-<td><?php echo $idErr; ?><?php echo $id?></td>
-<td><?php echo $nameErr; ?><?php echo $name?></td>
-<td><?php echo $phoneNumErr; ?><?php echo $phoneNum?></td>
+<td><?php echo $id?></td>
+<td><?php echo $name?></td>
+<td><?php echo $phoneNum?></td>
+<td><?php echo $email?></td>
+<td><?php echo $username?></td>
+<td><?php echo $password?></td>
 <td><a class="ajax-action-links" onclick="deleteRecord(<?php echo $user[0]["ID"]; ?>);">Delete</a></td>
 </tr>  
 <?php } ?>
@@ -75,5 +84,8 @@ if($idErr =="" && $nameErr== "" && $phoneNumErr== "") {
 <td><?php echo $idErr; ?></td>
 <td><?php echo $nameErr; ?></td>
 <td><?php echo $phoneNumErr; ?></td>
-<td></td>
+<td><?php echo $emailErr; ?></td>
+<td><?php echo $usernameErr; ?></td>
+<td><?php echo $passwordErr; ?></td>
+<td><?php echo $idErr.$nameErr.$phoneNumErr.$emailErr.$usernameErr.$passwordErr;?></td>
 </tr> 

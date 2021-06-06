@@ -24,6 +24,9 @@ function createNew() {
 	'<td contenteditable="true" id="txt_id" onBlur="addToHiddenField(this,\'id\')" onClick="editRow(this);"></td>' +
 	'<td contenteditable="true" id="txt_name" onBlur="addToHiddenField(this,\'name\')" onClick="editRow(this);"></td>' +
 	'<td contenteditable="true" id="phoneNum" onBlur="addToHiddenField(this,\'phoneNum\')" onClick="editRow(this);"></td>' +
+	'<td contenteditable="true" id="email" onBlur="addToHiddenField(this,\'email\')" onClick="editRow(this);"></td>' +
+	'<td contenteditable="true" id="username" onBlur="addToHiddenField(this,\'username\')" onClick="editRow(this);"></td>' +
+	'<td contenteditable="true" id="password" onBlur="addToHiddenField(this,\'password\')" onClick="editRow(this);"></td>' +
 	'<td><input type="hidden" id="id" /><input type="hidden" id="name" /><input type="hidden" id="phoneNum" /><span id="confirmAdd"><a onClick="addToDatabase()" class="ajax-action-links">Save</a> / <a onclick="cancelAdd();" class="ajax-action-links">Cancel</a></span></td>' +	
 	'</tr>';
   $("#table-body").append(data);
@@ -51,11 +54,14 @@ function addToDatabase() {
   var id = $("#id").val();
   var name = $("#name").val();
   var phoneNum = $("#phoneNum").val();
+  var email = $("#email").val();
+  var username = $("#username").val();
+  var password = $("#password").val();
   
 	  $.ajax({
 		url: "add.php",
 		type: "POST",
-		data:'id='+id+'&name='+name+'&phoneNum='+phoneNum,
+		data:'id='+id+'&name='+name+'&phoneNum='+phoneNum+'&email='+email+'&username='+username+'&password='+password ,
 		success: function(data){
 		  $("#new_row_ajax").remove();
 		  $("#add-more").show();		  
