@@ -1,6 +1,8 @@
 <?php
 require_once("dbcontroller.php");
 $db_handle = new DBController();
+session_start();
+
 
 //validate-------------------------------------
 $idErr=$nameErr=$yearErr="";
@@ -35,6 +37,7 @@ if (empty($_POST["name"])) {
 	  $yearErr = "Must be between 1990-2015";
 	}
   }
+
 //----------------------------------------------------------------------
 if($idErr =="" && $nameErr== "" && $yearErr== "") {
   $sql = "INSERT INTO cars (id,name,year) VALUES ('" . $id . "','" . $name . "','" . $year . "')";
@@ -51,3 +54,10 @@ if($idErr =="" && $nameErr== "" && $yearErr== "") {
 <td><a class="ajax-action-links" onclick="deleteRecord(<?php echo $cars[0]["id"]; ?>);">Delete</a></td>
 </tr>  
 <?php } ?>
+
+<tr class= "error" class="table-row" id="table-row-<?php echo $cars[0]["id"]; ?>">
+<td><?php echo $idErr; ?></td>
+<td><?php echo $nameErr; ?></td>
+<td><?php echo $yearErr; ?></td>
+<td></td>
+</tr> 

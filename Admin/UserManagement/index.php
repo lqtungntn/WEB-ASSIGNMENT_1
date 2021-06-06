@@ -11,6 +11,7 @@
 <?php
 require_once("dbcontroller.php");
 $db_handle = new DBController();
+session_start();
 
 $sql = "SELECT * from cars";
 $cars = $db_handle->runSelectQuery($sql);
@@ -51,7 +52,6 @@ function addToDatabase() {
   var name = $("#name").val();
   var year = $("#year").val();
   
-	  $("#confirmAdd").html('<img src="loaderIcon.gif" />');
 	  $.ajax({
 		url: "add.php",
 		type: "POST",
@@ -60,8 +60,17 @@ function addToDatabase() {
 		  $("#new_row_ajax").remove();
 		  $("#add-more").show();		  
 		  $("#table-body").append(data);
-		}
+		},
+		error: function() {
+            alert('Error occured');
+        }
 	  });
+
+	  <?php 
+	//   $err=$_SESSION["err"];
+	  ?>
+	//   var notifyErr='<p>Hello</p>';
+	//   $("#notifyErr").append(notifyErr);
 }
 function addToHiddenField(addColumn,hiddenField) {
 	var columnValue = $(addColumn).text();
@@ -91,8 +100,17 @@ body{width:615px;}
 .ajax-action-button {border:#094 1px solid;color: #09F; margin: 10px 0px;cursor:pointer;display: inline-block;padding: 10px 20px;}
 </style>
 
-<h2>User</h2>
-
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">	
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./">User Management</a>
+              </li>
+            </ul>
+          </div>
+<p id="notifyErr"></p>
 <table class="tbl-qa">
   <thead>
 	<tr>
@@ -108,9 +126,9 @@ body{width:615px;}
 	foreach($cars as $k=>$v) {
 	  ?>
 	  <tr class="table-row" id="table-row-<?php echo $cars[$k]["id"]; ?>">
-		<td contenteditable="true" onBlur="saveToDatabase(this,'id','<?php echo $cars[$k]["id"]; ?>')" onClick="editRow(this);"><?php echo $cars[$k]["id"]; ?></td>
-		<td contenteditable="true" onBlur="saveToDatabase(this,'name','<?php echo $cars[$k]["id"]; ?>')" onClick="editRow(this);"><?php echo $cars[$k]["name"]; ?></td>
-		<td contenteditable="true" onBlur="saveToDatabase(this,'year','<?php echo $cars[$k]["id"]; ?>')" onClick="editRow(this);"><?php echo $cars[$k]["year"]; ?></td>
+		<td><?php echo $cars[$k]["id"]; ?></td>
+		<td><?php echo $cars[$k]["name"]; ?></td>
+		<td><?php echo $cars[$k]["year"]; ?></td>
 		<td><a class="ajax-action-links" onclick="deleteRecord(<?php echo $cars[$k]["id"]; ?>);">Delete</a></td>
 	  </tr>
 	  <?php
