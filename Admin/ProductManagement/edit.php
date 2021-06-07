@@ -24,20 +24,52 @@ if($_POST["column"] =="name") {
         }
       }
 }
-if($_POST["column"] =="year") {
+if($_POST["column"] =="image") {
     if (empty($_POST["editval"])) {
-        $err = "Year is required";
+        $err = "Image is required";
       } else {
         // $name = test_input($_POST["name"]);
         // check if name only contains letters and whitespace
-        $year = $_POST["editval"];
-        if ($year<1990 || $year>2015) {
+        $image = $_POST["editval"];
+        if (0) {
           $err = "Must be between 1990-2015";
         }
       }
 }
+if($_POST["column"] =="price") {
+  if (empty($_POST["editval"])) {
+      $err = "Price is required";
+    } else {
+      $price = $_POST["Price"];
+      if (!is_numeric($price)) {
+        $err = "Must be a number";
+      }
+    }
+}
+
+if($_POST["column"] =="detail") {
+  if (empty($_POST["editval"])) {
+      $err = "Detail is required";
+    } else {
+      $detail = $_POST["editval"];
+      if (strlen($detail)<20) {
+        $err = "Detail must be more than 20 characters";
+      }
+    }
+}
+
+if($_POST["column"] =="operate") {
+  if (empty($_POST["editval"])) {
+      $err = "Operate description is required";
+    } else {
+      $operate = $_POST["editval"];
+      if (strlen($operate)<20) {
+        $err = "Operate description must be more than 20 characters";
+      }
+    }
+}
 
 if($err==""){
-$sql = "UPDATE cars set " . $_POST["column"] . " = '".$_POST["editval"]."' WHERE  id=".$_POST["id"];
+$sql = "UPDATE product set " . $_POST["column"] . " = '".$_POST["editval"]."' WHERE  id=".$_POST["id"];
 $result = $db_handle->executeUpdate($sql);}
 ?>

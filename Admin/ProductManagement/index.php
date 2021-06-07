@@ -21,8 +21,8 @@ $product = $db_handle->runSelectQuery($sql);
 function createNew() {
 	$("#add-more").hide();
 	var data = '<tr class="table-row" id="new_row_ajax">' +
-	'<td contenteditable="true" id="txt_id" onBlur="addToHiddenField(this,\'id\')" onClick="editRow(this);"></td>' +
-	'<td contenteditable="true" id="txt_name" onBlur="addToHiddenField(this,\'name\')" onClick="editRow(this);"></td>' +
+	'<td contenteditable="true" id="id" onBlur="addToHiddenField(this,\'id\')" onClick="editRow(this);"></td>' +
+	'<td contenteditable="true" id="name" onBlur="addToHiddenField(this,\'name\')" onClick="editRow(this);"></td>' +
 	'<td contenteditable="true" id="image" onBlur="addToHiddenField(this,\'image\')" onClick="editRow(this);"></td>' +
 	'<td contenteditable="true" id="price" onBlur="addToHiddenField(this,\'price\')" onClick="editRow(this);"></td>' +
 	'<td contenteditable="true" id="detail" onBlur="addToHiddenField(this,\'detail\')" onClick="editRow(this);"></td>' +
@@ -129,12 +129,12 @@ function deleteRecord(id) {
 	foreach($product as $k=>$v) {
 	  ?>
 	  <tr class="table-row" id="table-row-<?php echo $product[$k]["ID"]; ?>">
-		<td><?php echo $product[$k]["ID"]; ?></td>
-		<td><?php echo $product[$k]["Fullname"]; ?></td>
-		<td><?php echo $product[$k]["Image"]; ?></td>
-		<td><?php echo $product[$k]["Price"]; ?></td>
-		<td><?php echo $product[$k]["Detail"]; ?></td>
-		<td><?php echo $product[$k]["Operate"]; ?></td>
+		<td contenteditable="true" onBlur="saveToDatabase(this,'id','<?php echo $cars[$k]["id"]; ?>')" onClick="editRow(this);"><?php echo $product[$k]["ID"]; ?></td>
+		<td contenteditable="true" onBlur="saveToDatabase(this,'name','<?php echo $cars[$k]["name"]; ?>')" onClick="editRow(this);"><?php echo $product[$k]["Fullname"]; ?></td>
+		<td contenteditable="true" onBlur="saveToDatabase(this,'image','<?php echo $cars[$k]["image"]; ?>')" onClick="editRow(this);"><?php echo $product[$k]["Image"]; ?></td>
+		<td contenteditable="true" onBlur="saveToDatabase(this,'price','<?php echo $cars[$k]["price"]; ?>')" onClick="editRow(this);"><?php echo $product[$k]["Price"]; ?></td>
+		<td contenteditable="true" onBlur="saveToDatabase(this,'detail','<?php echo $cars[$k]["detail"]; ?>')" onClick="editRow(this);"><?php echo $product[$k]["Detail"]; ?></td>
+		<td contenteditable="true" onBlur="saveToDatabase(this,'operate','<?php echo $cars[$k]["operate"]; ?>')" onClick="editRow(this);"><?php echo $product[$k]["Operate"]; ?></td>
 		<td><a class="ajax-action-links" onclick="deleteRecord(<?php echo $product[$k]["ID"]; ?>);">Delete</a></td>
 	  </tr>
 	  <?php

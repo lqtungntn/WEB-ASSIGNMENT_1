@@ -4,7 +4,7 @@ $db_handle = new DBController();
 
 if(!empty($_POST['id'])) {
 	$id = $_POST['id'];
-	$sql = "DELETE FROM  user WHERE id = '$id' ";
+	$sql = "DELETE FROM  product WHERE id = '$id' ";
 	$db_handle->executeQuery($sql);
 }
 ?>

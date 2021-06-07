@@ -5,7 +5,7 @@ session_start();
 
 
 //validate-------------------------------------
-$idErr=$nameErr=$phoneNumErr=$emailErr=$usernameErr=$passwordErr="";
+$idErr=$nameErr=$imageErr=$priceErr=$detailErr=$operateErr="";
 
  //id
  if (empty($_POST["id"])) {
@@ -40,52 +40,51 @@ if (empty($_POST["name"])) {
 //   }
 
   //phoneNum
-  if (empty($_POST["phoneNum"])) {
-	$phoneNumErr = "phoneNum is required";
+  if (empty($_POST["image"])) {
+	$imageErr = "image is required";
   } else {
 	// $name = test_input($_POST["name"]);
 	// check if name only contains letters and whitespace
-	$phoneNum = $_POST["phoneNum"];
-	if (!is_numeric($phoneNum)) {
-	  $phoneNumErr = "Just only include number";
+	$image = $_POST["image"];
+	if (0) {
+	//   $phoneNumErr = "Must be a number";
 	}
   }
 
   //has not validate yet
-  $email = $_POST["email"];
-  $username = $_POST["username"];
-  $password = $_POST["password"];
+  $price = $_POST["price"];
+  $detail = $_POST["detail"];
+  $operate = $_POST["operate"];
 
 
 
 
 
 //----------------------------------------------------------------------
-if($idErr =="" && $nameErr== "" && $phoneNumErr== "") {
-  $sql = "INSERT INTO user (ID,Fullname,PhoneNum,Email,Username,Password) VALUES ('" . $id . "','" . $name . "','" . $phoneNum . "','" . $email . "','" . $username . "','" . $password . "')";
+if($idErr =="" && $nameErr== "" && $imageErr== ""&& $priceErr== ""&& $detailErr== ""&& $operateErr== "") {
+  $sql = "INSERT INTO product (ID,Fullname,Image,Price,Detail,Operate) VALUES ('" . $id . "','" . $name . "','" . $image . "','" . $price . "','" . $detail . "','" . $operate ."')";
   $faq_id = $db_handle->executeInsert($sql);
 	if(!empty($faq_id)) {
-		$sql = "SELECT * from user WHERE id = '$faq_id' ";
-		$user = $db_handle->runSelectQuery($sql);
+		$sql = "SELECT * from product WHERE id = '$faq_id' ";
+		$product = $db_handle->runSelectQuery($sql);
 	}
 ?>
-<tr class="table-row" id="table-row-<?php echo $user[0]["id"]; ?>">
-<td><?php echo $id?></td>
-<td><?php echo $name?></td>
-<td><?php echo $phoneNum?></td>
-<td><?php echo $email?></td>
-<td><?php echo $username?></td>
-<td><?php echo $password?></td>
-<td><a class="ajax-action-links" onclick="deleteRecord(<?php echo $user[0]["ID"]; ?>);">Delete</a></td>
+<tr class="table-row" id="table-row-<?php echo $product[0]["id"]; ?>">
+<td contenteditable="true" id="id" onBlur="addToHiddenField(this,\'id\')" onClick="editRow(this);"><?php echo $id?></td>
+<td contenteditable="true" id="name" onBlur="addToHiddenField(this,\"name\')" onClick="editRow(this);"><?php echo $name?></td>
+<td contenteditable="true" id="image" onBlur="addToHiddenField(this,\'image\')" onClick="editRow(this);"><?php echo $image?></td>
+<td contenteditable="true" id="price" onBlur="addToHiddenField(this,\'price\')" onClick="editRow(this);"><?php echo $price?></td>
+<td contenteditable="true" id="detail" onBlur="addToHiddenField(this,\'detail\')" onClick="editRow(this);"><?php echo $detail?></td>
+<td contenteditable="true" id="operate" onBlur="addToHiddenField(this,\'operate\')" onClick="editRow(this);"><?php echo $operate?></td>
+<td><a class="ajax-action-links" onclick="deleteRecord(<?php echo $product[0]["ID"]; ?>);">Delete</a></td>
 </tr>  
 <?php } ?>
-
-<tr class= "error" class="table-row" id="table-row-<?php echo $user[0]["id"]; ?>">
+<tr class= "error" class="table-row" id="table-row-<?php echo $product[0]["id"]; ?>">
 <td><?php echo $idErr; ?></td>
 <td><?php echo $nameErr; ?></td>
-<td><?php echo $phoneNumErr; ?></td>
-<td><?php echo $emailErr; ?></td>
-<td><?php echo $usernameErr; ?></td>
-<td><?php echo $passwordErr; ?></td>
-<td><?php echo $idErr.$nameErr.$phoneNumErr.$emailErr.$usernameErr.$passwordErr;?></td>
+<td><?php echo $imageErr; ?></td>
+<td><?php echo $priceErr; ?></td>
+<td><?php echo $detailErr; ?></td>
+<td><?php echo $operateErr; ?></td>
+<td></td>
 </tr> 
