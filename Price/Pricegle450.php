@@ -1,3 +1,40 @@
+<?php
+	session_start();
+	date_default_timezone_set('Asia/Ho_Chi_Minh');
+	$ppid = $_SESSION['pid'] = "14";
+	$listcmt = array();
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "mercedes";
+
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+	die("Connection failed: " . $conn->connect_error);
+	}
+
+	$sql = "SELECT * FROM comment WHERE ProductId=$ppid";
+    $result = $conn->query($sql);
+	if ($result->num_rows > 0) {
+		// output data of each row
+		while($row = $result->fetch_assoc()) {
+			$uidtmp = $row["UserID"];
+			$sqltmp = "SELECT * FROM user WHERE ID=$uidtmp";
+			$resulttmp = $conn->query($sqltmp);
+			$rowtmp = $resulttmp->fetch_assoc();
+
+			$obj = array();
+			$obj[0] = $row["AtTime"];
+			$obj[1] = $row["Content"];
+			$obj[2] = $rowtmp["Fullname"];
+			array_push($listcmt, $obj);
+		}
+	}
+	$conn->close();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,50 +49,56 @@
   <link rel="stylesheet" type="text/css" href="./Price.css">
 </head>
 <body>
-  <img id="fixed-background" src="./image_price/bg_price.png" alt="fixed-image">
-    <div id="nav" class="sticky-nav">
-      <nav class="navbar navbar-expand-lg ">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            Mercedes
-          </a>
-		  <div class="dropdown">
-			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			  <i class="fa fa-bars"></i>
-			</button>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			  <a class="dropdown-item" aria-current="page" href="../Home/Home.php">Trang chủ</a>
-			  <a class="dropdown-item" aria-current="page" href="../Introduce/Introduce.php">Giới thiệu</a>
-			  <a class="dropdown-item" aria-current="page" href="../Product/Products.php">Sản phẩm</a>
-			  <a class="dropdown-item" aria-current="page" href="../Price/Pricea200.php">Bảng giá</a>
-			  <a href="../Contact/Contacts.php" class="dropdown-item" aria-current="page">Liên hệ</a>
-
+<img id="fixed-background" src="./image_price/bg_price.png" alt="fixed-image">
+	<div id="nav" class="sticky-nav">
+		<nav class="navbar navbar-expand-lg ">
+		  <div class="container">
+			<a class="navbar-brand" href="../Home/Home.php">
+			  Mercedes
+			</a>
+			<div class="dropdown">
+			  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="fa fa-bars"></i>
+			  </button>
+			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" aria-current="page" href="../Home/Home.php">Trang chủ</a>
+				<a class="dropdown-item" aria-current="page" href="../Introduce/Introduce.php">Giới thiệu</a>
+				<a class="dropdown-item" aria-current="page" href="../Product/Products.php">Sản phẩm</a>
+				<a class="dropdown-item" aria-current="page" href="../Price/Pricea200.php">Bảng giá</a>
+				<a href="../Contact/Contacts.php" class="dropdown-item" aria-current="page">Liên hệ</a>
+				<a class="dropdown-item" href="../account/index.php" class="nav-link" aria-current="page">
+                  <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo "Trang cá nhân";
+                        else echo "Đăng nhập"; ?>
+                </a>
+			  </div>
 			</div>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+				<li class="nav-item">
+				  <a class="nav-link" aria-current="page" href="../Home/Home.php">Trang chủ</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" aria-current="page" href="../Introduce/Introduce.php">Giới thiệu</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" aria-current="page" href="../Product/Products.php">Sản phẩm</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link active" aria-current="page" href="../Price/Pricea200.php">Bảng giá</a>
+				</li>
+				<li class="nav-item">
+				  <a href="../Contact/Contacts.php" class="nav-link" aria-current="page">Liên hệ</a>
+				</li>
+			  </ul>
+			</div>
+			<a href="../account/index.php" class="nav-link" aria-current="page">
+                  <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo "Trang cá nhân";
+                        else echo "Đăng nhập"; ?>
+                </a>
+			<div class="logo"><img class="logo" src="../image/logo.png" alt=""></div>
 		  </div>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../Home/Home.php">Trang chủ</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../Introduce/Introduce.php">Giới thiệu</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../Product/Products.php">Sản phẩm</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../Price/Pricea200.php">Bảng giá</a>
-              </li>
-              <li class="nav-item">
-                <a href="../Contact/Contacts.php"class="nav-link" aria-current="page" href="#">Liên hệ</a>
-              </li>
-            </ul>
-          </div>
-		  <div class="logo"><img class="logo" src="../image/logo.png" alt=""></div>
-
-        </div>
-      </nav>
-    </div>
+		</nav>
+	  </div>
    
 <!--Price-->
 <div class="price">
@@ -303,6 +346,24 @@
 					</figure>
 				</div>	
 			</div>
+		</div>
+	</div>
+	<div class="vd">
+		<div class="content">
+			<h2 class="text-success font-weight-bold text-uppercase">Bình luận</h2>
+			<div class="comment">
+			<?php foreach($listcmt as $cmt): ?>
+				<p><span class="text-primary">[<?=date("Y-m-d H:i",$cmt[0])?>]</span> <span class="text-success"><?=$cmt[2]?>: </span><span class="text-secondary"><?=$cmt[1]?></span></p>
+			<?php endforeach ?>
+			</div>
+			<?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true): ?>
+			<form action="../account/comment.php" method="post">
+				<div class="input-group mb-3">
+				<input type="text" class="form-control" name="content" placeholder="Viết bình luận..." aria-label="Recipient's username" aria-describedby="button-addon2">
+				<input class="btn btn-success" type="submit" name="subcomment" value="Gửi">
+				</div>
+			</form>
+			<?php endif ?>
 		</div>
 	</div>	
 </div>

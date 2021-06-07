@@ -78,8 +78,8 @@ if(isset($_SESSION['is_login'])) if($_SESSION["is_login"] == true) header("Locat
             </div>
             <?php endif ?>
             <div class="mb-3 col-md-7">
-                <label for="formGroupExampleInput" class="form-label">Email</label>
-                <input type="text" name="username" size="25" class="form-control" id="formGroupExampleInput" placeholder="Nhập Email đăng nhập">
+                <label for="formGroupExampleInput" class="form-label">Tài khoản</label>
+                <input type="text" name="username" size="25" class="form-control" id="formGroupExampleInput" placeholder="Tên tài khoản">
             </div>
             <div class="mb-3 col-md-7">
                 <label for="formGroupExampleInput2" class="form-label">Mật khẩu</label>

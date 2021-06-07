@@ -51,7 +51,7 @@ session_start();
                       <a class="nav-link" aria-current="page" href="../Product/Products.php">Sản phẩm</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="../Price/Pricea200.php">Bảng giá</a>
+                      <a class="nav-link" aria-current="page" href="../Price/Price.html">Bảng giá</a>
                     </li>
                     <li class="nav-item">
                       <a href="../Contact/Contacts.php" class="nav-link active" aria-current="page">Liên hệ</a>
