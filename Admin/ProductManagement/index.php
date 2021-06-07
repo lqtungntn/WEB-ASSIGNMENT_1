@@ -116,7 +116,7 @@ function deleteRecord(id) {
   <thead>
 	<tr>
 	  <th class="table-header">ID</th>
-	  <th class="table-header">name</th>
+	  <th class="table-header">Name</th>
 	  <th class="table-header">Image</th>
 	  <th class="table-header">Price</th>
 	  <th class="table-header">Detail</th>
@@ -130,7 +130,7 @@ function deleteRecord(id) {
 	  ?>
 	  <tr class="table-row" id="table-row-<?php echo $product[$k]["ID"]; ?>">
 		<td><?php echo $product[$k]["ID"]; ?></td>
-		<td><?php echo $product[$k]["name"]; ?></td>
+		<td><?php echo $product[$k]["Fullname"]; ?></td>
 		<td><?php echo $product[$k]["Image"]; ?></td>
 		<td><?php echo $product[$k]["Price"]; ?></td>
 		<td><?php echo $product[$k]["Detail"]; ?></td>

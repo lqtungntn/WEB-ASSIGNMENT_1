@@ -106,6 +106,9 @@ function deleteRecord(id) {
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="./">User Management</a>
               </li>
+			  <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../ProductManagement/index.php">Product Management</a>
+              </li>
             </ul>
           </div>
 <p id="notifyErr"></p>
