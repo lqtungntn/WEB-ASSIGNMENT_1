@@ -40,7 +40,6 @@ function editRow(editableObj) {
 }
 
 function saveToDatabase(editableObj,column,id) {
-  $(editableObj).css("background","#FFF url(loaderIcon.gif) no-repeat right");
   $.ajax({
     url: "edit.php",
     type: "POST",
@@ -48,7 +47,9 @@ function saveToDatabase(editableObj,column,id) {
     success: function(data){
       $(editableObj).css("background","#FDFDFD");
     }
+	// error: function(req, err){ console.log('my message' + err); }
   });
+  alert("Edit successful!!!")
 }
 function addToDatabase() {
   var id = $("#id").val();
@@ -71,12 +72,6 @@ function addToDatabase() {
             alert('Error occured');
         }
 	  });
-
-	  <?php 
-	//   $err=$_SESSION["err"];
-	  ?>
-	//   var notifyErr='<p>Hello</p>';
-	//   $("#notifyErr").append(notifyErr);
 }
 function addToHiddenField(addColumn,hiddenField) {
 	var columnValue = $(addColumn).text();
@@ -111,7 +106,6 @@ function deleteRecord(id) {
               </li>
             </ul>
           </div>
-<p id="notifyErr"></p>
 <table class="tbl-qa">
   <thead>
 	<tr>
@@ -129,12 +123,12 @@ function deleteRecord(id) {
 	foreach($product as $k=>$v) {
 	  ?>
 	  <tr class="table-row" id="table-row-<?php echo $product[$k]["ID"]; ?>">
-		<td contenteditable="true" onBlur="saveToDatabase(this,'id','<?php echo $cars[$k]["id"]; ?>')" onClick="editRow(this);"><?php echo $product[$k]["ID"]; ?></td>
-		<td contenteditable="true" onBlur="saveToDatabase(this,'name','<?php echo $cars[$k]["name"]; ?>')" onClick="editRow(this);"><?php echo $product[$k]["Fullname"]; ?></td>
-		<td contenteditable="true" onBlur="saveToDatabase(this,'image','<?php echo $cars[$k]["image"]; ?>')" onClick="editRow(this);"><?php echo $product[$k]["Image"]; ?></td>
-		<td contenteditable="true" onBlur="saveToDatabase(this,'price','<?php echo $cars[$k]["price"]; ?>')" onClick="editRow(this);"><?php echo $product[$k]["Price"]; ?></td>
-		<td contenteditable="true" onBlur="saveToDatabase(this,'detail','<?php echo $cars[$k]["detail"]; ?>')" onClick="editRow(this);"><?php echo $product[$k]["Detail"]; ?></td>
-		<td contenteditable="true" onBlur="saveToDatabase(this,'operate','<?php echo $cars[$k]["operate"]; ?>')" onClick="editRow(this);"><?php echo $product[$k]["Operate"]; ?></td>
+		<td contenteditable="true" onBlur="saveToDatabase(this,'ID','<?php echo $product[$k]["ID"]; ?>')" onClick="editRow(this);"><?php echo $product[$k]["ID"]; ?></td>
+		<td contenteditable="true" onBlur="saveToDatabase(this,'Fullname','<?php echo $product[$k]["ID"]; ?>')" onClick="editRow(this);"><?php echo $product[$k]["Fullname"]; ?></td>
+		<td contenteditable="true" onBlur="saveToDatabase(this,'Image','<?php echo $product[$k]["ID"]; ?>')" onClick="editRow(this);"><?php echo $product[$k]["Image"]; ?></td>
+		<td contenteditable="true" onBlur="saveToDatabase(this,'Price','<?php echo $product[$k]["ID"]; ?>')" onClick="editRow(this);"><?php echo $product[$k]["Price"]; ?></td>
+		<td contenteditable="true" onBlur="saveToDatabase(this,'Detail','<?php echo $product[$k]["ID"]; ?>')" onClick="editRow(this);"><?php echo $product[$k]["Detail"]; ?></td>
+		<td contenteditable="true" onBlur="saveToDatabase(this,'Operate','<?php echo $product[$k]["ID"]; ?>')" onClick="editRow(this);"><?php echo $product[$k]["Operate"]; ?></td>
 		<td><a class="ajax-action-links" onclick="deleteRecord(<?php echo $product[$k]["ID"]; ?>);">Delete</a></td>
 	  </tr>
 	  <?php

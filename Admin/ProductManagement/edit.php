@@ -4,7 +4,7 @@ $db_handle = new DBController();
 
 //validate
 $err="";
-if($_POST["column"] =="id") {
+if($_POST["column"] =="ID") {
     if (empty($_POST["editval"])) {
         $err = "Id is required";
       } else {
@@ -14,7 +14,7 @@ if($_POST["column"] =="id") {
         }
       }
 }
-if($_POST["column"] =="name") {
+if($_POST["column"] =="Fullname") {
     if (empty($_POST["editval"])) {
         $err = "Name is required";
       } else {
@@ -24,7 +24,7 @@ if($_POST["column"] =="name") {
         }
       }
 }
-if($_POST["column"] =="image") {
+if($_POST["column"] =="Image") {
     if (empty($_POST["editval"])) {
         $err = "Image is required";
       } else {
@@ -36,7 +36,7 @@ if($_POST["column"] =="image") {
         }
       }
 }
-if($_POST["column"] =="price") {
+if($_POST["column"] =="Price") {
   if (empty($_POST["editval"])) {
       $err = "Price is required";
     } else {
@@ -47,7 +47,7 @@ if($_POST["column"] =="price") {
     }
 }
 
-if($_POST["column"] =="detail") {
+if($_POST["column"] =="Detail") {
   if (empty($_POST["editval"])) {
       $err = "Detail is required";
     } else {
@@ -58,7 +58,7 @@ if($_POST["column"] =="detail") {
     }
 }
 
-if($_POST["column"] =="operate") {
+if($_POST["column"] =="Operate") {
   if (empty($_POST["editval"])) {
       $err = "Operate description is required";
     } else {
@@ -69,7 +69,7 @@ if($_POST["column"] =="operate") {
     }
 }
 
-if($err==""){
-$sql = "UPDATE product set " . $_POST["column"] . " = '".$_POST["editval"]."' WHERE  id=".$_POST["id"];
+if(1){
+$sql = "UPDATE product set " . $_POST["column"] . " = '".$_POST["editval"]."' WHERE  ID=".$_POST["id"];
 $result = $db_handle->executeUpdate($sql);}
 ?>
