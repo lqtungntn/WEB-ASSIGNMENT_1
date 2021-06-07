@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 05, 2021 lúc 10:56 AM
+-- Thời gian đã tạo: Th6 07, 2021 lúc 03:05 AM
 -- Phiên bản máy phục vụ: 10.4.18-MariaDB
 -- Phiên bản PHP: 8.0.5
 
@@ -64,7 +64,8 @@ CREATE TABLE `product` (
   `Fullname` varchar(100) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
   `Image` varchar(500) CHARACTER SET utf8 NOT NULL,
   `Price` float NOT NULL,
-  `Detail` text CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `Overview` text CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `Operate` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `LastChangedBy` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -76,12 +77,19 @@ CREATE TABLE `product` (
 
 CREATE TABLE `user` (
   `ID` int(11) NOT NULL,
-  `Username` varchar(30) CHARACTER SET utf8 NOT NULL,
-  `Password` varchar(30) CHARACTER SET utf8 NOT NULL,
   `Fullname` varchar(100) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
   `PhoneNum` varchar(20) CHARACTER SET utf8 NOT NULL,
-  `Email` varchar(50) CHARACTER SET utf8 NOT NULL
+  `Email` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `Username` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `Password` varchar(30) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `user`
+--
+
+INSERT INTO `user` (`ID`, `Fullname`, `PhoneNum`, `Email`, `Username`, `Password`) VALUES
+(4, 'Đặng Tuấn Anh', '0353323643', 'anh.dangleo1601@hcmut.edu.vn', 'Leo', '123');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -115,7 +123,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

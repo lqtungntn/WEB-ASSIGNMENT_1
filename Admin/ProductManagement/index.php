@@ -13,8 +13,8 @@ require_once("dbcontroller.php");
 $db_handle = new DBController();
 session_start();
 
-$sql = "SELECT * from user";
-$user = $db_handle->runSelectQuery($sql);
+$sql = "SELECT * from product";
+$product = $db_handle->runSelectQuery($sql);
 ?>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 <script>
@@ -23,11 +23,11 @@ function createNew() {
 	var data = '<tr class="table-row" id="new_row_ajax">' +
 	'<td contenteditable="true" id="txt_id" onBlur="addToHiddenField(this,\'id\')" onClick="editRow(this);"></td>' +
 	'<td contenteditable="true" id="txt_name" onBlur="addToHiddenField(this,\'name\')" onClick="editRow(this);"></td>' +
-	'<td contenteditable="true" id="phoneNum" onBlur="addToHiddenField(this,\'phoneNum\')" onClick="editRow(this);"></td>' +
-	'<td contenteditable="true" id="email" onBlur="addToHiddenField(this,\'email\')" onClick="editRow(this);"></td>' +
-	'<td contenteditable="true" id="username" onBlur="addToHiddenField(this,\'username\')" onClick="editRow(this);"></td>' +
-	'<td contenteditable="true" id="password" onBlur="addToHiddenField(this,\'password\')" onClick="editRow(this);"></td>' +
-	'<td><input type="hidden" id="id" /><input type="hidden" id="name" /><input type="hidden" id="phoneNum" /><span id="confirmAdd"><a onClick="addToDatabase()" class="ajax-action-links">Save</a> / <a onclick="cancelAdd();" class="ajax-action-links">Cancel</a></span></td>' +	
+	'<td contenteditable="true" id="image" onBlur="addToHiddenField(this,\'image\')" onClick="editRow(this);"></td>' +
+	'<td contenteditable="true" id="price" onBlur="addToHiddenField(this,\'price\')" onClick="editRow(this);"></td>' +
+	'<td contenteditable="true" id="detail" onBlur="addToHiddenField(this,\'detail\')" onClick="editRow(this);"></td>' +
+	'<td contenteditable="true" id="operate" onBlur="addToHiddenField(this,\'operate\')" onClick="editRow(this);"></td>' +
+	'<td><input type="hidden" id="id" /><input type="hidden" id="name" /><input type="hidden" id="image" /><input type="hidden" id="price" /><input type="hidden" id="detail" /><input type="hidden" id="operate" /><span id="confirmAdd"><a onClick="addToDatabase()" class="ajax-action-links">Save</a> / <a onclick="cancelAdd();" class="ajax-action-links">Cancel</a></span></td>' +	
 	'</tr>';
   $("#table-body").append(data);
 }
@@ -53,15 +53,15 @@ function saveToDatabase(editableObj,column,id) {
 function addToDatabase() {
   var id = $("#id").val();
   var name = $("#name").val();
-  var phoneNum = $("#phoneNum").val();
-  var email = $("#email").val();
-  var username = $("#username").val();
-  var password = $("#password").val();
+  var image = $("#image").val();
+  var price = $("#price").val();
+  var detail = $("#detail").val();
+  var operate = $("#operate").val();
   
 	  $.ajax({
 		url: "add.php",
 		type: "POST",
-		data:'id='+id+'&name='+name+'&phoneNum='+phoneNum+'&email='+email+'&username='+username+'&password='+password ,
+		data:'id='+id+'&name='+name+'&image='+image+'&price='+price+'&detail='+detail+'&operate='+operate,
 		success: function(data){
 		  $("#new_row_ajax").remove();
 		  $("#add-more").show();		  
@@ -104,7 +104,10 @@ function deleteRecord(id) {
                 <a class="nav-link active" aria-current="page" href="../">Trang chủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./">User Management</a>
+                <a class="nav-link" aria-current="page" href="../UserManagement/index.php">User Management</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./">Product Management</a>
               </li>
             </ul>
           </div>
@@ -113,27 +116,26 @@ function deleteRecord(id) {
   <thead>
 	<tr>
 	  <th class="table-header">ID</th>
-	  <th class="table-header">Fullname</th>
-	  <th class="table-header">PhoneNum</th>
-	  <th class="table-header">Email</th>
-	  <th class="table-header">Username</th>
-	  <th class="table-header">Password</th>
-	  <th class="table-header">Actions</th>
+	  <th class="table-header">name</th>
+	  <th class="table-header">Image</th>
+	  <th class="table-header">Price</th>
+	  <th class="table-header">Detail</th>
+	  <th class="table-header">Operate</th>
 	</tr>
   </thead>
   <tbody id="table-body">
 	<?php
-	if(!empty($user)) { 
-	foreach($user as $k=>$v) {
+	if(!empty($product)) { 
+	foreach($product as $k=>$v) {
 	  ?>
-	  <tr class="table-row" id="table-row-<?php echo $user[$k]["ID"]; ?>">
-		<td><?php echo $user[$k]["ID"]; ?></td>
-		<td><?php echo $user[$k]["Fullname"]; ?></td>
-		<td><?php echo $user[$k]["PhoneNum"]; ?></td>
-		<td><?php echo $user[$k]["Email"]; ?></td>
-		<td><?php echo $user[$k]["Username"]; ?></td>
-		<td><?php echo $user[$k]["Password"]; ?></td>
-		<td><a class="ajax-action-links" onclick="deleteRecord(<?php echo $user[$k]["ID"]; ?>);">Delete</a></td>
+	  <tr class="table-row" id="table-row-<?php echo $product[$k]["ID"]; ?>">
+		<td><?php echo $product[$k]["ID"]; ?></td>
+		<td><?php echo $product[$k]["name"]; ?></td>
+		<td><?php echo $product[$k]["Image"]; ?></td>
+		<td><?php echo $product[$k]["Price"]; ?></td>
+		<td><?php echo $product[$k]["Detail"]; ?></td>
+		<td><?php echo $product[$k]["Operate"]; ?></td>
+		<td><a class="ajax-action-links" onclick="deleteRecord(<?php echo $product[$k]["ID"]; ?>);">Delete</a></td>
 	  </tr>
 	  <?php
 	}
