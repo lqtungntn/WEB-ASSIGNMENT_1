@@ -45,14 +45,31 @@ if(isset($_POST['dang-ky'])){
         if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
         }
+        $chkn = 0; 
+        $chk = "SELECT * FROM user";
+        $resultchk = $conn->query($chk);
+        if ($resultchk->num_rows > 0) {
+            // output data of each row
+                while($row = $resultchk->fetch_assoc()) {
+                    if ($row["Username"] == $tk){
+                        $chkn++;
+                    }
+                }
+            }
 
-        $sql = "INSERT INTO user (Username, Password, Fullname, PhoneNum, Email) VALUES ('".$tk."', '".$mk."', '".$t."', '".$pn."', '".$e."')";
+        if ($chkn == 0 ) {
+            $ins = "INSERT INTO user (Username, Password, Fullname, PhoneNum, Email) VALUES ('".$tk."', '".$mk."', '".$t."', '".$pn."', '".$e."')";
 
-            if ($conn->query($sql) === TRUE) {
+            if ($conn->query($ins) === TRUE) {
                 $_SESSION["error"] = "Đăng ký thành công";
                 header("Location: http://localhost/WEB-ASSIGNMENT_1/login/index.php");
             } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "Error: " . $ins . "<br>" . $conn->error;
+            }
+        }
+        else {
+            $_SESSION["error"] = "Trùng tài khoản đăng nhập";
+            header("Location: http://localhost/WEB-ASSIGNMENT_1-main/login/dang-ky.php");
         }
 
         $conn->close();

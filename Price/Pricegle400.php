@@ -355,6 +355,8 @@ Với đặc tính xử lý tốt cố định, sự tiện nghi khi lái xe t�
 				<input class="btn btn-success" type="submit" name="subcomment" value="Gửi">
 				</div>
 			</form>
+			<?php else: ?>
+				<a class = "btn btn-primary" href = "../login/index.php">Đăng nhập để bình luận</a>
 			<?php endif ?>
 		</div>
 	</div>	
