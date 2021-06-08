@@ -212,7 +212,7 @@ function deleteRecord(id) {
 	if(!empty($user)) { 
 	foreach($user as $k=>$v) {
 	  ?>
-	  <tr class="table-row" id="table-row-<?php echo $user[$k]["ID"]; ?>">
+	  <tr class="table-row" id="table-row">
 		<td><?php echo $user[$k]["ID"]; ?></td>
 		<td><?php echo $user[$k]["Fullname"]; ?></td>
 		<td><?php echo $user[$k]["PhoneNum"]; ?></td>

@@ -69,7 +69,7 @@ if($idErr =="" && $nameErr== "" && $phoneNumErr== "") {
 		$user = $db_handle->runSelectQuery($sql);
 	}
 ?>
-<tr class="table-row" id="table-row-<?php echo $user[0]["ID"]; ?>">
+<tr class="table-row" id="table-row">
 <td><?php echo $id?></td>
 <td><?php echo $name?></td>
 <td><?php echo $phoneNum?></td>
@@ -80,12 +80,12 @@ if($idErr =="" && $nameErr== "" && $phoneNumErr== "") {
 </tr>  
 <?php } ?>
 
-<tr class= "error" id="table-row-<?php echo $user[0]["ID"]; ?>">
-<td><?php echo "Hello" ?></td>
+<tr class= "error" id="table-row">
+<td><?php echo $idErr ?></td>
 <td><?php echo $nameErr; ?></td>
 <td><?php echo $phoneNumErr; ?></td>
 <td><?php echo $emailErr; ?></td>
 <td><?php echo $usernameErr; ?></td>
 <td><?php echo $passwordErr; ?></td>
-<td><?php echo $idErr.$nameErr.$phoneNumErr.$emailErr.$usernameErr.$passwordErr;?></td>
+<td></td>
 </tr> 

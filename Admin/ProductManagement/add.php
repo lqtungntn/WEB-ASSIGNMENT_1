@@ -69,7 +69,7 @@ if($idErr =="" && $nameErr== "" && $imageErr== ""&& $priceErr== ""&& $detailErr=
 		$product = $db_handle->runSelectQuery($sql);
 	}
 ?>
-<tr class="table-row" id="table-row-<?php echo $product[0]["id"]; ?>">
+<tr class="table-row" id="table-row">
 <td contenteditable="true" id="id" onBlur="addToHiddenField(this,\'id\')" onClick="editRow(this);"><?php echo $id?></td>
 <td contenteditable="true" id="name" onBlur="addToHiddenField(this,\"name\')" onClick="editRow(this);"><?php echo $name?></td>
 <td contenteditable="true" id="image" onBlur="addToHiddenField(this,\'image\')" onClick="editRow(this);"><?php echo $image?></td>
@@ -79,7 +79,7 @@ if($idErr =="" && $nameErr== "" && $imageErr== ""&& $priceErr== ""&& $detailErr=
 <td><a class="ajax-action-links" onclick="deleteRecord(<?php echo $product[0]["ID"]; ?>);">Delete</a></td>
 </tr>  
 <?php } ?>
-<tr class= "error" class="table-row" id="table-row-<?php echo $product[0]["id"]; ?>">
+<tr class= "error" class="table-row" id="table-row">
 <td><?php echo $idErr; ?></td>
 <td><?php echo $nameErr; ?></td>
 <td><?php echo $imageErr; ?></td>
