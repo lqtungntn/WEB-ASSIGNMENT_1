@@ -357,6 +357,8 @@ Chuyển số như trong F1: Dùng lẫy chuyển số bánh lái DIRECT SELECT,
 				<input class="btn btn-success" type="submit" name="subcomment" value="Gửi">
 				</div>
 			</form>
+			<?php else: ?>
+				<a class = "btn btn-primary" href = "../login/index.php">Đăng nhập để bình luận</a>
 			<?php endif ?>
 		</div>
 	</div>	
