@@ -13,6 +13,13 @@ ul {
   overflow: auto;
 }
 
+li:first-child {
+  text-align: center;
+  font-size: large;
+  line-height: 3rem;
+  font-weight: bold;
+}
+
 li a {
   display: block;
   color: #000;
@@ -59,4 +66,22 @@ li a:hover:not(.active) {
   cursor: pointer;
   display: inline-block;
   padding: 10px 20px;
+}
+
+a.button:link,
+a.button:visited {
+  margin-left: 1%;
+  margin-top: 1%;
+  color: gray;
+  background-color: #d8e2dc;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.button:hover,
+a.button:active {
+  background-color: #04aa6d;
+  color: white;
 }

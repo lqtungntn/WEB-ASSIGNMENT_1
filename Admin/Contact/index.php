@@ -24,6 +24,7 @@ $row = $result->fetch_assoc();
 ?>
 
 <ul>
+  <li>Admin</li>
   <li><a href="../UserManagement/index.php">User Management</a></li>
   <li><a href="../ProductManagement/index.php">Product Management</a></li>
   <li><a class="active" href="">Contact Info</a></li>
@@ -57,7 +58,7 @@ $row = $result->fetch_assoc();
 	</tr>
 </tbody>
 </table>
-<button class="Edit"><a href="./edit.php">Edit</a></button>
+<a class="button" href="./edit.php">Edit</a>
 </div>
 
 </body>
