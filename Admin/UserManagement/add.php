@@ -6,16 +6,6 @@ session_start();
 
 //validate-------------------------------------
 $idErr=$nameErr=$phoneNumErr=$emailErr=$usernameErr=$passwordErr="";
-
- //id
- if (empty($_POST["id"])) {
-	$idErr = "Id is required";
-  } else {
-	$id = $_POST["id"];
-	if (!is_numeric($id)) {
-	  $idErr = "Must be an integer";
-	}
-  }
   //name
 if (empty($_POST["name"])) {
 	$nameErr = "Name is required";
@@ -53,24 +43,47 @@ if (empty($_POST["name"])) {
 
   //has not validate yet
   $email = $_POST["email"];
+  if (empty($email)) {
+	$emailErr = "Email is required";
+  } else {
+	// check if e-mail address is well-formed
+	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+	  $emailErr = "Invalid email format";
+	}
+  }
+
+
   $username = $_POST["username"];
+  if (strlen($username) < 5){
+	$usernameErr ='Username should be at least 5 characters in length';
+}
+
+
   $password = $_POST["password"];
+     // check password
+	 $uppercase = preg_match('@[A-Z]@', $password);
+	 $lowercase = preg_match('@[a-z]@', $password);
+	 $number    = preg_match('@[0-9]@', $password);
+	 $specialChars = preg_match('@[^\w]@', $password);
+	 if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
+		$passwordErr = 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
+	}
 
 
 
 
 
 //----------------------------------------------------------------------
-if($idErr =="" && $nameErr== "" && $phoneNumErr== "") {
-  $sql = "INSERT INTO user (ID,Fullname,PhoneNum,Email,Username,Password) VALUES ('" . $id . "','" . $name . "','" . $phoneNum . "','" . $email . "','" . $username . "','" . $password . "')";
+if($nameErr== "" && $phoneNumErr== "" && $emailErr=="" && $usernameErr=="" && $passwordErr=="") {
+  $sql = "INSERT INTO user (Fullname,PhoneNum,Email,Username,Password) VALUES ('" . $name . "','" . $phoneNum . "','" . $email . "','" . $username . "','" . $password . "')";
   $faq_id = $db_handle->executeInsert($sql);
 	if(!empty($faq_id)) {
 		$sql = "SELECT * from user WHERE ID = '$faq_id' ";
 		$user = $db_handle->runSelectQuery($sql);
 	}
 ?>
-<tr class="table-row" id="table-row">
-<td><?php echo $id?></td>
+<tr class="table-row" id="table-row-<?php echo $user[0]["ID"]; ?>">
+<td><?php echo $faq_id?></td>
 <td><?php echo $name?></td>
 <td><?php echo $phoneNum?></td>
 <td><?php echo $email?></td>
@@ -80,8 +93,9 @@ if($idErr =="" && $nameErr== "" && $phoneNumErr== "") {
 </tr>  
 <?php } ?>
 
-<tr class= "error" id="table-row">
-<td><?php echo $idErr ?></td>
+<?php if($nameErr!== "" || $phoneNumErr!== "" || $emailErr!=="" || $usernameErr!=="" && $passwordErr!=="") { ?>
+<tr class="error">
+<td></td>
 <td><?php echo $nameErr; ?></td>
 <td><?php echo $phoneNumErr; ?></td>
 <td><?php echo $emailErr; ?></td>
@@ -89,3 +103,4 @@ if($idErr =="" && $nameErr== "" && $phoneNumErr== "") {
 <td><?php echo $passwordErr; ?></td>
 <td></td>
 </tr> 
+<?php }?>

@@ -7,15 +7,6 @@ session_start();
 //validate-------------------------------------
 $idErr=$nameErr=$imageErr=$priceErr=$detailErr=$operateErr="";
 
- //id
- if (empty($_POST["id"])) {
-	$idErr = "Id is required";
-  } else {
-	$id = $_POST["id"];
-	if (!is_numeric($id)) {
-	  $idErr = "Must be an integer";
-	}
-  }
   //name
 if (empty($_POST["name"])) {
 	$nameErr = "Name is required";
@@ -61,7 +52,7 @@ if (empty($_POST["name"])) {
 
 
 //----------------------------------------------------------------------
-if($idErr =="" && $nameErr== "" && $imageErr== ""&& $priceErr== ""&& $detailErr== ""&& $operateErr== "") {
+if($nameErr== "" && $imageErr== ""&& $priceErr== ""&& $detailErr== ""&& $operateErr== "") {
   $sql = "INSERT INTO product (ID,Fullname,Image,Price,Detail,Operate) VALUES ('" . $id . "','" . $name . "','" . $image . "','" . $price . "','" . $detail . "','" . $operate ."')";
   $faq_id = $db_handle->executeInsert($sql);
 	if(!empty($faq_id)) {
@@ -69,9 +60,9 @@ if($idErr =="" && $nameErr== "" && $imageErr== ""&& $priceErr== ""&& $detailErr=
 		$product = $db_handle->runSelectQuery($sql);
 	}
 ?>
-<tr class="table-row" id="table-row">
+<tr class="table-row" id="table-row-<?php echo $product[0]["ID"]; ?>">
 <td contenteditable="true" id="id" onBlur="addToHiddenField(this,\'id\')" onClick="editRow(this);"><?php echo $id?></td>
-<td contenteditable="true" id="name" onBlur="addToHiddenField(this,\"name\')" onClick="editRow(this);"><?php echo $name?></td>
+<td contenteditable="true" id="name" onBlur="addToHiddenField(this,\'name\')" onClick="editRow(this);"><?php echo $name?></td>
 <td contenteditable="true" id="image" onBlur="addToHiddenField(this,\'image\')" onClick="editRow(this);"><?php echo $image?></td>
 <td contenteditable="true" id="price" onBlur="addToHiddenField(this,\'price\')" onClick="editRow(this);"><?php echo $price?></td>
 <td contenteditable="true" id="detail" onBlur="addToHiddenField(this,\'detail\')" onClick="editRow(this);"><?php echo $detail?></td>

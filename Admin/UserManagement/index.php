@@ -108,7 +108,7 @@ function createNew() {
   $("#add-more").hide();
   var data =
     '<tr class="table-row" id="new_row_ajax">' +
-    '<td contenteditable="true" id="txt_id" onBlur="addToHiddenField(this,\'id\')" onClick="editRow(this);"></td>' +
+    '<td></td>' +
     '<td contenteditable="true" id="txt_name" onBlur="addToHiddenField(this,\'name\')" onClick="editRow(this);"></td>' +
     '<td contenteditable="true" id="phoneNum" onBlur="addToHiddenField(this,\'phoneNum\')" onClick="editRow(this);"></td>' +
     '<td contenteditable="true" id="email" onBlur="addToHiddenField(this,\'email\')" onClick="editRow(this);"></td>' +
@@ -186,6 +186,7 @@ function deleteRecord(id) {
     });
   }
   alert("Delete successful!!!");
+  location.reload();
 }
 </script>
 <ul>
