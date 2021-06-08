@@ -19,7 +19,7 @@ $product = $db_handle->runSelectQuery($sql);
 
 <ul>
   <li>Admin</li>
-  <li><a href="../UserManagement/index.php">User Management</a></li>
+  <li><a href="../UserManagement/index.php"">User Management</a></li>
   <li><a class="active" href="">Product Management</a></li>
   <li><a href="../Contact/index.php">Contact Info</a></li>
 </ul>
@@ -58,7 +58,7 @@ $product = $db_handle->runSelectQuery($sql);
 </table>
 <div class="ajax-action-button" id="add-more" onClick="createNew();">Add More</div>
 </div>
-<script src="index.js"></script>
+<script src="./index.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 </body>
 </html>

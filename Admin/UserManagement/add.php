@@ -80,8 +80,8 @@ if($idErr =="" && $nameErr== "" && $phoneNumErr== "") {
 </tr>  
 <?php } ?>
 
-<tr class= "error" class="table-row" id="table-row-<?php echo $user[0]["id"]; ?>">
-<td><?php echo $idErr; ?></td>
+<tr class= "error" class="table-row" id="table-row-<?php echo $user[0]["ID"]; ?>">
+<td><?php echo "Hello" ?></td>
 <td><?php echo $nameErr; ?></td>
 <td><?php echo $phoneNumErr; ?></td>
 <td><?php echo $emailErr; ?></td>
