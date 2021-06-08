@@ -167,9 +167,6 @@ function addToDatabase() {
       $("#add-more").show();
       $("#table-body").append(data);
     },
-    error: function () {
-      alert("Error occured");
-    },
   });
 }
 function addToHiddenField(addColumn, hiddenField) {

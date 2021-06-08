@@ -65,11 +65,11 @@ if($idErr =="" && $nameErr== "" && $phoneNumErr== "") {
   $sql = "INSERT INTO user (ID,Fullname,PhoneNum,Email,Username,Password) VALUES ('" . $id . "','" . $name . "','" . $phoneNum . "','" . $email . "','" . $username . "','" . $password . "')";
   $faq_id = $db_handle->executeInsert($sql);
 	if(!empty($faq_id)) {
-		$sql = "SELECT * from user WHERE id = '$faq_id' ";
+		$sql = "SELECT * from user WHERE ID = '$faq_id' ";
 		$user = $db_handle->runSelectQuery($sql);
 	}
 ?>
-<tr class="table-row" id="table-row-<?php echo $user[0]["id"]; ?>">
+<tr class="table-row" id="table-row-<?php echo $user[0]["ID"]; ?>">
 <td><?php echo $id?></td>
 <td><?php echo $name?></td>
 <td><?php echo $phoneNum?></td>
@@ -80,7 +80,7 @@ if($idErr =="" && $nameErr== "" && $phoneNumErr== "") {
 </tr>  
 <?php } ?>
 
-<tr class= "error" class="table-row" id="table-row-<?php echo $user[0]["ID"]; ?>">
+<tr class= "error" id="table-row-<?php echo $user[0]["ID"]; ?>">
 <td><?php echo "Hello" ?></td>
 <td><?php echo $nameErr; ?></td>
 <td><?php echo $phoneNumErr; ?></td>
