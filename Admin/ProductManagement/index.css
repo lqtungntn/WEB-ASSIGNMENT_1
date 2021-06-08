@@ -1,5 +1,44 @@
 body {
-  width: 1000px;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 10%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li:first-child {
+  text-align: center;
+  font-size: large;
+  line-height: 3rem;
+  font-weight: bold;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 5% 5%;
+  text-decoration: none;
+  text-align: center;
+}
+
+li a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+.align-items-start {
+  width: 20%;
 }
 .tbl-qa {
   width: 98%;
@@ -27,4 +66,22 @@ body {
   cursor: pointer;
   display: inline-block;
   padding: 10px 20px;
+}
+
+a.button:link,
+a.button:visited {
+  margin-left: 1%;
+  margin-top: 1%;
+  color: gray;
+  background-color: #d8e2dc;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.button:hover,
+a.button:active {
+  background-color: #04aa6d;
+  color: white;
 }

@@ -93,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     if($addressErr== "" && $phoneNumErr== "" && $emailErr== "" && $linkErr== "")
-    {$sql = "UPDATE contact SET Address= '". $address ."', PhoneNum=" . $phoneNum . ", Email= '" . $email . "', Facebook='" .$facebook . "', Twitter='" . $twitter . "', Reddit='" .$reddit . "', Youtube= '" .$youtube . "', Instagram='" .$instagram . "', Telegram= '" .$telegram. "';";
+    {$sql = "UPDATE contact SET Address= '". $address ."', PhoneNum='" . $phoneNum . "', Email= '" . $email . "', Facebook='" .$facebook . "', Twitter='" . $twitter . "', Reddit='" .$reddit . "', Youtube= '" .$youtube . "', Instagram='" .$instagram . "', Telegram= '" .$telegram. "';";
 
         if(mysqli_query($conn, $sql)){
             echo "<script>alert(\"Update successfully\");</script>";

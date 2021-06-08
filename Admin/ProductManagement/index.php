@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./index.css">
-	<title>Admin</title>
+<title>Admin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="../../image/logo.png" />
+<link rel="stylesheet" type="text/css" href="./index.css">
 </head>
 <body>
 <?php
@@ -16,95 +16,14 @@ session_start();
 $sql = "SELECT * from product";
 $product = $db_handle->runSelectQuery($sql);
 ?>
-<script>
-function createNew() {
-	$("#add-more").hide();
-	var data = '<tr class="table-row" id="new_row_ajax">' +
-	'<td contenteditable="true" id="id" onBlur="addToHiddenField(this,\'id\')" onClick="editRow(this);"></td>' +
-	'<td contenteditable="true" id="name" onBlur="addToHiddenField(this,\'name\')" onClick="editRow(this);"></td>' +
-	'<td contenteditable="true" id="image" onBlur="addToHiddenField(this,\'image\')" onClick="editRow(this);"></td>' +
-	'<td contenteditable="true" id="price" onBlur="addToHiddenField(this,\'price\')" onClick="editRow(this);"></td>' +
-	'<td contenteditable="true" id="detail" onBlur="addToHiddenField(this,\'detail\')" onClick="editRow(this);"></td>' +
-	'<td contenteditable="true" id="operate" onBlur="addToHiddenField(this,\'operate\')" onClick="editRow(this);"></td>' +
-	'<td><input type="hidden" id="id" /><input type="hidden" id="name" /><input type="hidden" id="image" /><input type="hidden" id="price" /><input type="hidden" id="detail" /><input type="hidden" id="operate" /><span id="confirmAdd"><a onClick="addToDatabase()" class="ajax-action-links">Save</a> / <a onclick="cancelAdd();" class="ajax-action-links">Cancel</a></span></td>' +	
-	'</tr>';
-  $("#table-body").append(data);
-}
-function cancelAdd() {
-	$("#add-more").show();
-	$("#new_row_ajax").remove();
-}
-function editRow(editableObj) {
-  $(editableObj).css("background","#FFF");
-}
 
-function saveToDatabase(editableObj,column,id) {
-  $.ajax({
-    url: "edit.php",
-    type: "POST",
-    data:'column='+column+'&editval='+$(editableObj).text()+'&id='+id,
-    success: function(data){
-      $(editableObj).css("background","#FDFDFD");
-	  alert("Edit successful!!!")
-    }
-	// error: function(req, err){ console.log('my message' + err); }
-  });
-}
-function addToDatabase() {
-  var id = $("#id").val();
-  var name = $("#name").val();
-  var image = $("#image").val();
-  var price = $("#price").val();
-  var detail = $("#detail").val();
-  var operate = $("#operate").val();
-  
-	  $.ajax({
-		url: "add.php",
-		type: "POST",
-		data:'id='+id+'&name='+name+'&image='+image+'&price='+price+'&detail='+detail+'&operate='+operate,
-		success: function(data){
-		  $("#new_row_ajax").remove();
-		  $("#add-more").show();		  
-		  $("#table-body").append(data);
-		},
-		error: function() {
-            alert('Error occured');
-        }
-	  });
-}
-function addToHiddenField(addColumn,hiddenField) {
-	var columnValue = $(addColumn).text();
-	$("#"+hiddenField).val(columnValue);
-}
-
-function deleteRecord(id) {
-	if(confirm("Are you sure you want to delete this row?")) {
-		$.ajax({
-			url: "delete.php",
-			type: "POST",
-			data:'id='+id,
-			success: function(data){
-			  $("#table-row-"+id).remove();
-			}
-		});
-	}
-	alert("Delete successful!!!")
-}
-</script>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">	
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../">Trang chủ</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../UserManagement/index.php">User Management</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./">Product Management</a>
-              </li>
-            </ul>
-          </div>
+<ul>
+  <li>Admin</li>
+  <li><a href="../UserManagement/index.php">User Management</a></li>
+  <li><a class="active" href="">Product Management</a></li>
+  <li><a href="../Contact/index.php">Contact Info</a></li>
+</ul>
+<div style="margin-left:10%;height:1000px;">
 <table class="tbl-qa">
   <thead>
 	<tr>
@@ -114,6 +33,7 @@ function deleteRecord(id) {
 	  <th class="table-header">Price</th>
 	  <th class="table-header">Detail</th>
 	  <th class="table-header">Operate</th>
+	  <th class="table-header">Action</th>
 	</tr>
   </thead>
   <tbody id="table-body">
@@ -137,6 +57,8 @@ function deleteRecord(id) {
   </tbody>
 </table>
 <div class="ajax-action-button" id="add-more" onClick="createNew();">Add More</div>
+</div>
+<script src="index.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 </body>
 </html>
