@@ -10,11 +10,12 @@
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
+	mysqli_set_charset($conn,"utf8");
 	// Check connection
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 	}
-
+	mysqli_set_charset($conn,"utf8");
 	$sql = "SELECT * FROM comment WHERE ProductId=$ppid";
     $result = $conn->query($sql);
 	if ($result->num_rows > 0) {
