@@ -1,6 +1,39 @@
 <?php
-session_start();
-$_SESSION['pid'] = "1";
+	session_start();
+	date_default_timezone_set('Asia/Ho_Chi_Minh');
+	$ppid = $_SESSION['pid'] = "1";
+	$listcmt = array();
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "mercedes";
+
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+	die("Connection failed: " . $conn->connect_error);
+	}
+
+	$sql = "SELECT * FROM comment WHERE ProductId=$ppid";
+    $result = $conn->query($sql);
+	if ($result->num_rows > 0) {
+		// output data of each row
+		while($row = $result->fetch_assoc()) {
+			$uidtmp = $row["UserID"];
+			$sqltmp = "SELECT * FROM user WHERE ID=$uidtmp";
+			$resulttmp = $conn->query($sqltmp);
+			$rowtmp = $resulttmp->fetch_assoc();
+
+			$obj = array();
+			$obj[0] = $row["AtTime"];
+			$obj[1] = $row["Content"];
+			$obj[2] = $rowtmp["Fullname"];
+			array_push($listcmt, $obj);
+		}
+	}
+	$conn->close();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -284,14 +317,18 @@ $_SESSION['pid'] = "1";
 		<div class="content">
 			<h2 class="text-success font-weight-bold text-uppercase">Bình luận</h2>
 			<div class="comment">
-
+			<?php foreach($listcmt as $cmt): ?>
+				<p><span class="text-primary">[<?=date("Y-m-d H:i",$cmt[0])?>]</span> <span class="text-success"><?=$cmt[2]?>: </span><span class="text-secondary"><?=$cmt[1]?></span></p>
+			<?php endforeach ?>
 			</div>
+			<?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true): ?>
 			<form action="../account/comment.php" method="post">
-			<div class="input-group mb-3">
-			<input type="text" class="form-control" placeholder="Viết bình luận..." aria-label="Recipient's username" aria-describedby="button-addon2">
-			<input class="btn btn-success" type="submit" name="subcomment" value="Gửi">
-			</div>
+				<div class="input-group mb-3">
+				<input type="text" class="form-control" name="content" placeholder="Viết bình luận..." aria-label="Recipient's username" aria-describedby="button-addon2">
+				<input class="btn btn-success" type="submit" name="subcomment" value="Gửi">
+				</div>
 			</form>
+			<?php endif ?>
 		</div>
 	</div>
 </div>
