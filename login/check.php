@@ -4,13 +4,13 @@ if(isset($_POST['login'])){
 
     if($_POST['username'] == null){
         $_SESSION["error"] = "Chưa nhập đủ thông tin";
-        header("Location: http://localhost/WEB-ASSIGNMENT_1-main/login/index.php");
+        header("Location: http://localhost/WEB-ASSIGNMENT_1/login/index.php");
     }
     else $tk = $_POST['username'];
 
     if($_POST['password'] == null){
         $_SESSION["error"] = "Chưa nhập đủ thông tin";
-        header("Location: http://localhost/WEB-ASSIGNMENT_1-main/login/index.php");
+        header("Location: http://localhost/WEB-ASSIGNMENT_1/login/index.php");
     }
     else $mk = $_POST['password'];
 
@@ -45,18 +45,18 @@ if(isset($_POST['login'])){
                     $_SESSION["sdt"] = $row["PhoneNum"];
                     $_SESSION["email"] = $row["Email"];
                     $_SESSION["error"] = "Đăng nhập thành công";
-                    header("Location: http://localhost/WEB-ASSIGNMENT_1-main/account/index.php");
+                    header("Location: http://localhost/WEB-ASSIGNMENT_1/account/index.php");
                     break;
                 }
                 else {
                     $_SESSION["is_login"] = false;
                     $_SESSION["error"] = "Nhập sai thông tin";
-                    header("Location: http://localhost/WEB-ASSIGNMENT_1-main/login/index.php");
+                    header("Location: http://localhost/WEB-ASSIGNMENT_1/login/index.php");
                 }
             }
         } else {
             $_SESSION["error"] = "Chưa có tài khoản nào";
-            header("Location: http://localhost/WEB-ASSIGNMENT_1-main/login/index.php");
+            header("Location: http://localhost/WEB-ASSIGNMENT_1/login/index.php");
         }
         $conn->close();
     }

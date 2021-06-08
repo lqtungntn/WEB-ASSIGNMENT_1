@@ -2,70 +2,70 @@
 session_start();
 switch ($_SESSION['pid']) {
     case 1:
-      $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Pricea200.php";
+      $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Pricea200.php";
       break;
     case 2:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Pricea250.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Pricea250.php";
        break;
     case 3:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Pricec200.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Pricec200.php";
        break;
     case 4:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Pricec250.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Pricec250.php";
        break;
     case 5:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Pricec300.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Pricec300.php";
        break;
     case 6:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Pricee200.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Pricee200.php";
        break;
     case 7:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Pricee250.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Pricee250.php";
        break;
     case 8:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Pricee300.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Pricee300.php";
        break;
     case 9:
-      $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Priceg65.php";
+      $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Priceg65.php";
       break;
     case 10:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Priceglc200.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Priceglc200.php";
        break;
     case 11:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Priceglc300coupe.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Priceglc300coupe.php";
        break;
     case 12:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Priceglc300matic.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Priceglc300matic.php";
        break;
     case 13:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Pricegle400.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Pricegle400.php";
        break;
     case 14:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Pricegle450.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Pricegle450.php";
        break;
     case 15:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Pricemb450.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Pricemb450.php";
        break;
     case 16:
-      $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Pricemb450matic.php";
+      $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Pricemb450matic.php";
       break;
     case 17:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Pricemb560.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Pricemb560.php";
        break;
     case 18:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Prices450.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Prices450.php";
        break;
     case 19:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Prices500cabriolet.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Prices500cabriolet.php";
        break;
     case 20:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Prices500coupe.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Prices500coupe.php";
        break;
     case 21:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Pricev250.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Pricev250.php";
        break;
     default:
-       $url = "http://localhost/WEB-ASSIGNMENT_1-main/Price/Pricea200.php";
+       $url = "http://localhost/WEB-ASSIGNMENT_1/Price/Pricea200.php";
   }
 if(isset($_POST['subcomment'])){
 

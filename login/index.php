@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['is_login'])) if($_SESSION["is_login"] == true) header("Location: http://localhost/WEB-ASSIGNMENT_1-main/account/index.php");
+if(isset($_SESSION['is_login'])) if($_SESSION["is_login"] == true) header("Location: http://localhost/WEB-ASSIGNMENT_1/account/index.php");
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -87,7 +87,7 @@ if(isset($_SESSION['is_login'])) if($_SESSION["is_login"] == true) header("Locat
             </div>
             <div class="mb-3 col-md-6">
             <input type="submit" name="login" value="Đăng nhập">
-            <a href="http://localhost/WEB-ASSIGNMENT_1-main/login/dang-ky.php">Bạn chưa có tài khoản?</a>
+            <a href="http://localhost/WEB-ASSIGNMENT_1/login/dang-ky.php">Bạn chưa có tài khoản?</a>
             </div>
         </form>
     </div>

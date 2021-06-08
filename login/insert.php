@@ -4,31 +4,31 @@ if(isset($_POST['dang-ky'])){
 
     if($_POST['name'] == null){
         $_SESSION["error"] = "Chưa nhập đủ thông tin";
-        header("Location: http://localhost/WEB-ASSIGNMENT_1-main/login/dang-ky.php");
+        header("Location: http://localhost/WEB-ASSIGNMENT_1/login/dang-ky.php");
     }
     else $t = $_POST['name'];
 
     if($_POST['username'] == null){
         $_SESSION["error"] = "Chưa nhập đủ thông tin";
-        header("Location: http://localhost/WEB-ASSIGNMENT_1-main/login/dang-ky.php");
+        header("Location: http://localhost/WEB-ASSIGNMENT_1/login/dang-ky.php");
     }
     else $tk = $_POST['username'];
 
     if($_POST['password'] == null){
         $_SESSION["error"] = "Chưa nhập đủ thông tin";
-        header("Location: http://localhost/WEB-ASSIGNMENT_1-main/login/dang-ky.php");
+        header("Location: http://localhost/WEB-ASSIGNMENT_1/login/dang-ky.php");
     }
     else $mk = $_POST['password'];
 
     if($_POST['phonenum'] == null){
         $_SESSION["error"] = "Chưa nhập đủ thông tin";
-        header("Location: http://localhost/WEB-ASSIGNMENT_1-main/login/dang-ky.php");
+        header("Location: http://localhost/WEB-ASSIGNMENT_1/login/dang-ky.php");
     }
     else $pn = $_POST['phonenum'];
 
     if($_POST['email'] == null){
         $_SESSION["error"] = "Chưa nhập đủ thông tin";
-        header("Location: http://localhost/WEB-ASSIGNMENT_1-main/login/dang-ky.php");
+        header("Location: http://localhost/WEB-ASSIGNMENT_1/login/dang-ky.php");
     }
     else $e = $_POST['email'];
 
@@ -49,7 +49,7 @@ if(isset($_POST['dang-ky'])){
 
             if ($conn->query($sql) === TRUE) {
                 $_SESSION["error"] = "Đăng ký thành công";
-                header("Location: http://localhost/WEB-ASSIGNMENT_1-main/login/index.php");
+                header("Location: http://localhost/WEB-ASSIGNMENT_1/login/index.php");
             } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }

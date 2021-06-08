@@ -32,7 +32,7 @@ if(isset($_POST['update'])){
                 $_SESSION["name"] = $t;
                 $_SESSION["sdt"] = $sdt;
                 $_SESSION["email"] = $e;
-                header("Location: http://localhost/WEB-ASSIGNMENT_1-main/account/index.php");
+                header("Location: http://localhost/WEB-ASSIGNMENT_1/account/index.php");
             } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }

@@ -1,10 +1,10 @@
 <?php
 session_start();
 if(!isset($_SESSION['is_login'])){
-  header("Location: http://localhost/WEB-ASSIGNMENT_1-main/login/index.php");
+  header("Location: http://localhost/WEB-ASSIGNMENT_1/login/index.php");
 }
 elseif ($_SESSION["is_login"] == false)
-  header("Location: http://localhost/WEB-ASSIGNMENT_1-main/login/index.php");
+  header("Location: http://localhost/WEB-ASSIGNMENT_1/login/index.php");
 ?>
 <!DOCTYPE html>
 <html lang="vi">
