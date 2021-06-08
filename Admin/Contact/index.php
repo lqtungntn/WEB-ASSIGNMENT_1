@@ -1,29 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./index.css">
-	<title>Admin</title>
+<link rel="stylesheet" type="text/css" href="./index.css">
 </head>
 <body>
-<div class="collapse navbar-collapse" id="navbarSupportedContent">	
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../">Trang chủ</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../UserManagement/index.php">User Management</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../ProductManagement/index.php">Product Management</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./">Contact Management</a>
-              </li>
-            </ul>
-          </div>
 <?php
 $servername = "localhost";
 $username = "root";
@@ -42,7 +22,14 @@ $sql = "SELECT * FROM contact";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 ?>
-  <table class="tbl-qa">
+
+<ul>
+  <li><a href="../UserManagement/index.php">User Management</a></li>
+  <li><a href="../ProductManagement/index.php">Product Management</a></li>
+  <li><a class="active" href="">Contact Info</a></li>
+</ul>
+<div style="margin-left:10%;height:1000px;">
+<table class="tbl-qa">
       <thead>
   <tr>
     <th>Address</th>
@@ -70,9 +57,8 @@ $row = $result->fetch_assoc();
 	</tr>
 </tbody>
 </table>
-<a href="./edit.php">Edit</a>
-    <?php
-$conn->close();
-?>
+<button class="Edit"><a href="./edit.php">Edit</a></button>
+</div>
+
 </body>
 </html>
