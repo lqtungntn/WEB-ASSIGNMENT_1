@@ -15,6 +15,7 @@ class DBController {
 
 	function connectDB() {
 		$conn = mysqli_connect($this->host,$this->user,$this->password,$this->database);
+		mysqli_set_charset($conn,"utf8");
 		return $conn;
 	}
 

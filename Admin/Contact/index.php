@@ -69,7 +69,7 @@ $row = $result->fetch_assoc();
 	</tr>
 </tbody>
 </table>
-<a href="./edit.php'">Edit</a>
+<a href="./edit.php">Edit</a>
     <?php
 $conn->close();
 ?>

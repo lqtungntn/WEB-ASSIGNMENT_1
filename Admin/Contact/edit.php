@@ -65,6 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $phoneNumErr = "Phone is required";
     } else {
         // check if phone only number
+        $phoneNum = $_POST["phoneNum"];
         if (!preg_match("/^[0-9]*$/", $phoneNum)) {
           $phoneNumErr = "Only number allowed";
         }
@@ -81,22 +82,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
       }
 
-      //link
-      if (empty($_POST["link"])) {
-        $linkErr = "Link is required";
-      } else {
-        // $name = test_input($_POST["name"]);
-        // check if name only contains letters and whitespace
-        $link = $_POST["link"];
-        if (strlen($link)<5) {
-          $linkErr = "Link to social media must more than 5 characters";
-        }
-      }
+      $facebook = ($_POST["facebook"]);
+      $twitter = ($_POST["twitter"]);
+      $reddit = ($_POST["reddit"]);
+      $youtube = ($_POST["youtube"]);
+      $instagram = ($_POST["instagram"]);
+      $telegram = ($_POST["telegram"]);
 
 
 
     if($addressErr== "" && $phoneNumErr== "" && $emailErr== "" && $linkErr== "")
-    {$sql = "UPDATE contact SET Address='$address', PhoneNum=$phoneNum , Email=$email , Facebook=$facebook , Twitter=$twitter , Reddit=$reddit , Youtube=$youtube , Instagram=$instagram , Telegram=$telegram;";
+    {$sql = "UPDATE contact SET Address= '". $address ."', PhoneNum=" . $phoneNum . ", Email= '" . $email . "', Facebook='" .$facebook . "', Twitter='" . $twitter . "', Reddit='" .$reddit . "', Youtube= '" .$youtube . "', Instagram='" .$instagram . "', Telegram= '" .$telegram. "';";
 
         if(mysqli_query($conn, $sql)){
             echo "<script>alert(\"Update successfully\");</script>";
@@ -123,7 +119,7 @@ $conn->close();
             <input id="facebook" type="text" name="facebook" value="<?php echo $recordUpdate['Facebook'] ?>">
             <span class="error">* <?php echo $linkErr;?></span>
     <p>Twitter</p>
-            <input id="Twitter" type="text" name="Twitter" value="<?php echo $recordUpdate['Twitter'] ?>">
+            <input id="Twitter" type="text" name="twitter" value="<?php echo $recordUpdate['Twitter'] ?>">
             <span class="error">* <?php echo $linkErr;?></span>
     <p>Reddit</p>
             <input id="reddit" type="text" name="reddit" value="<?php echo $recordUpdate['Reddit'] ?>">
