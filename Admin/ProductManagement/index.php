@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="./index.css">
 	<title>Admin</title>
 </head>
 <body>
@@ -16,7 +16,6 @@ session_start();
 $sql = "SELECT * from product";
 $product = $db_handle->runSelectQuery($sql);
 ?>
-<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 <script>
 function createNew() {
 	$("#add-more").hide();
@@ -46,10 +45,10 @@ function saveToDatabase(editableObj,column,id) {
     data:'column='+column+'&editval='+$(editableObj).text()+'&id='+id,
     success: function(data){
       $(editableObj).css("background","#FDFDFD");
+	  alert("Edit successful!!!")
     }
 	// error: function(req, err){ console.log('my message' + err); }
   });
-  alert("Edit successful!!!")
 }
 function addToDatabase() {
   var id = $("#id").val();
@@ -138,5 +137,6 @@ function deleteRecord(id) {
   </tbody>
 </table>
 <div class="ajax-action-button" id="add-more" onClick="createNew();">Add More</div>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 </body>
 </html>
