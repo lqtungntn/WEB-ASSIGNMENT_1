@@ -15,6 +15,24 @@ session_start();
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  
     </head>
     <body>
+      <?php 
+       $servername = "localhost";
+       $username = "root";
+       $password = "";
+       $dbname = "mercedes";
+
+       // Create connection
+       $conn = new mysqli($servername, $username, $password, $dbname);
+       mysqli_set_charset($conn,"utf8");
+       // Check connection
+       if ($conn->connect_error) {
+       die("Connection failed: " . $conn->connect_error);
+       }
+
+       $sql = "SELECT * FROM contact";
+       $result = $conn->query($sql);
+       $contact = $result->fetch_assoc();
+      ?>
         <!-- Header -->
         <div class="header-background">
         <div id="nav" class="sticky-nav">
@@ -86,7 +104,7 @@ session_start();
                                     <img src="../Contact/map.png" alt="map">
                                 </div>
                                 <h3>Địa Chỉ</h3>
-                                <p>68 Dịch Vọng Cầu Giấy Hà Nội</p>
+                                <p><?php echo $contact['Address'] ?></p>
                             </div>
                         </div>
                         <div class="box">
@@ -98,7 +116,7 @@ session_start();
                                     <img src="../Contact/phone.png" alt="phone">
                                 </div>
                                 <h3>Số Điện Thoại</h3>
-                                <p>0932968998</p>
+                                <p><?php echo $contact['PhoneNum'] ?></p>
                             </div>
                         </div>
                         <div class="box">
@@ -110,7 +128,7 @@ session_start();
                                     <img src="../Contact/email.png" alt="email">
                                 </div>
                                 <h3>Email</h3>
-                                <p>conghoanguyen98@gmail.com</p>
+                                <p><?php echo $contact['Email'] ?></p>
                             </div>
                         </div>
                     </div>
