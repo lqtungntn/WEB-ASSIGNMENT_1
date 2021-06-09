@@ -46,7 +46,8 @@ if(isset($_POST['login'])){
                     $_SESSION["sdt"] = $row["PhoneNum"];
                     $_SESSION["email"] = $row["Email"];
                     $_SESSION["error"] = "Đăng nhập thành công";
-                    header("Location: http://localhost/WEB-ASSIGNMENT_1/account/index.php");
+                    if( $_SESSION["tk"]=="admin") {header("Location: http://localhost/WEB-ASSIGNMENT_1/Admin/UserManagement/index.php");}
+                    else header("Location: http://localhost/WEB-ASSIGNMENT_1/account/index.php");
                     break;
                 }
                 else {

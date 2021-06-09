@@ -60,7 +60,7 @@ session_start();
                 <a class="nav-link active" aria-current="page" href="../Product/Products.php">Sản phẩm</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../Price/Price.html">Bảng giá</a>
+                <a class="nav-link" aria-current="page" href="../Price/Pricea200.php">Bảng giá</a>
               </li>
               <li class="nav-item">
                 <a href="../Contact/Contacts.php" class="nav-link" aria-current="page">Liên hệ</a>
@@ -109,7 +109,7 @@ session_start();
               <img src="./image_product/filter_classa200.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filter_classa200.jpg" data-gall="portfolioGallery" class="venobox" title="A200"><i class="bx bx-plus"></i><h6>A200</h6></a>
-                <a href="../Price/Price.html#a200"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Pricea200.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -119,7 +119,7 @@ session_start();
               <img src="./image_product/filter_classa250.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filter_classa250.jpg" data-gall="portfolioGallery" class="venobox" title="A250"><i class="bx bx-plus"></i><h6>A250</h6></a>
-                <a href="../Price/Price.html#a250"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Pricea250.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -129,7 +129,7 @@ session_start();
               <img src="./image_product/filter_classc200.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filter_classc200.jpg" data-gall="portfolioGallery" class="venobox" title="C200"><i class="bx bx-plus"></i><h6>C200</h6></a>
-                <a href="../Price/Price.html#c200"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Pricec200.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -141,7 +141,7 @@ session_start();
               <div class="portfolio-links">
                 <a href="./image_product/filter_classc250.jpg" data-gall="portfolioGallery" class="venobox" title="C250"><i class="bx bx-plus"></i><h6>C250</h6></a>
 				
-                <a href="../Price/Price.html#c250"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Pricec250.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
 			  
             </div>
@@ -152,7 +152,7 @@ session_start();
               <img src="./image_product/filter_classc300.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filter_classc300.jpg" data-gall="portfolioGallery" class="venobox" title="C300"><i class="bx bx-plus"></i><h6>C300</h6></a>
-                <a href="../Price/Price.html#c300"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Pricec300.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -162,7 +162,7 @@ session_start();
               <img src="./image_product/filter_classe200.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filter_classe200.jpg" data-gall="portfolioGallery" class="venobox" title="E200"><i class="bx bx-plus"></i><h6>E200</h6></a>
-                <a href="../Price/Price.html#e200"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Pricee200.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -172,7 +172,7 @@ session_start();
               <img src="./image_product/filter_classe250.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filter_classe250.jpg" data-gall="portfolioGallery" class="venobox" title="E250"><i class="bx bx-plus"></i><h6>E250</h6></a>
-                <a href="../Price/Price.html#e250"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Pricee250.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -182,7 +182,7 @@ session_start();
               <img src="./image_product/filter_classe300.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filter_classe300.jpg" data-gall="portfolioGallery" class="venobox" title="E300"><i class="bx bx-plus"></i><h6>E300</h6></a>
-                <a href="../Price/Price.html#e300"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Pricee300.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -192,7 +192,7 @@ session_start();
               <img src="./image_product/filter_classg65.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filter_classg65.jpg" data-gall="portfolioGallery" class="venobox" title="G65"><i class="bx bx-plus"></i><h6>G65</h6></a>
-                <a href="../Price/Price.html#g65"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Priceg65.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -202,7 +202,7 @@ session_start();
               <img src="./image_product/filter_classglc200.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filter_classglc200.jpg" data-gall="portfolioGallery" class="venobox" title="GLC 200 4MATIC"><i class="bx bx-plus"></i><h6>GLC 200 4MATIC</h6></a>
-                <a href="../Price/Price.html#glc200"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Priceglc200.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -212,7 +212,7 @@ session_start();
               <img src="./image_product/filter_classglc300coupe.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filter_classglc300coupe.jpg" data-gall="portfolioGallery" class="venobox" title="GLC 300 COUPE"><i class="bx bx-plus"></i><h6>GLC 300 COUPE</h6></a>
-                <a href="../Price/Price.html#glccoupe"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Priceglc300coupe.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -222,7 +222,7 @@ session_start();
               <img src="./image_product/filter_classglc300.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filter_classglc300.jpg" data-gall="portfolioGallery" class="venobox" title="GLC 300 4MATIC"><i class="bx bx-plus"></i><h6>GLC 300 4MATIC</h6></a>
-                <a href="../Price/Price.html#glc4matic"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Priceglc300matic.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -232,7 +232,7 @@ session_start();
               <img src="./image_product/filter_gle_coupe.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filter_gle_coupe.jpg" data-gall="portfolioGallery" class="venobox" title="GLE 400 4MATIC"><i class="bx bx-plus"></i><h6>GLE 400 4MATIC</h6></a>
-                <a href="../Price/Price.html#gle400"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Pricegle400.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -242,7 +242,7 @@ session_start();
               <img src="./image_product/filter_gle_suv.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filter_gle_suv.jpg" data-gall="portfolioGallery" class="venobox" title="GLE 450 4MATIC"><i class="bx bx-plus"></i><h6>GLE 450 4MATIC</h6></a>
-                <a href="../Price/Price.html#gle450"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Pricegle450.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -252,7 +252,7 @@ session_start();
               <img src="./image_product/filtermb450.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filtermb450.jpg" data-gall="portfolioGallery" class="venobox" title="MAYBACH 450"><i class="bx bx-plus"></i><h6>MAYBACH 450</h6></a>
-                <a href="../Price/Price.html#mb450"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Pricemb450.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -262,7 +262,7 @@ session_start();
               <img src="./image_product/filtermb450matic.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filtermb450matic.jpg" data-gall="portfolioGallery" class="venobox" title="MAYBACH 450 4MATIC"><i class="bx bx-plus"></i><h6>MAYBACH 450 4MATIC</h6></a>
-                <a href="../Price/Price.html#mb450matic"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Pricemb450matic.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -272,7 +272,7 @@ session_start();
               <img src="./image_product/filtermb560.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filtermb560.jpg" data-gall="portfolioGallery" class="venobox" title="MAYBACH 560 4MATIC"><i class="bx bx-plus"></i><h6>MAYBACH 560 4MATIC</h6></a>
-                <a href="../Price/Price.html#mb560matic"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Pricemb560.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -282,7 +282,7 @@ session_start();
               <img src="./image_product/filters450.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filters450.jpg" data-gall="portfolioGallery" class="venobox" title="S 450 L"><i class="bx bx-plus"></i><h6>S 450 L</h6></a>
-                <a href="../Price/Price.html#s450"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Prices450.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -292,7 +292,7 @@ session_start();
               <img src="./image_product/filters500cab.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filters500cab.jpg" data-gall="portfolioGallery" class="venobox" title="S 500 CABRIOLET"><i class="bx bx-plus"></i><h6>S 500 CABRIOLET</h6></a>
-                <a href="../Price/Price.html#s500cabriolet"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Prices500cabriolet.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -302,7 +302,7 @@ session_start();
               <img src="./image_product/filters500c.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filters500c.jpg" data-gall="portfolioGallery" class="venobox" title="S 500 COUPE"><i class="bx bx-plus"></i><h6>S 500 COUPE</h6></a>
-                <a href="../Price/Price.html#s500coupe"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Prices500coupe.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
@@ -312,7 +312,7 @@ session_start();
               <img src="./image_product/filter_v250.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="./image_product/filter_v250.jpg" data-gall="portfolioGallery" class="venobox" title="V250"><i class="bx bx-plus"></i><h6>V250</h6></a>
-                <a href="../Price/Price.html#v250"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
+                <a href="../Price/Pricev250.php"><i class="bx bx-link"></i><h6>Chi tiết</h6></a>
               </div>
             </div>
           </div>
