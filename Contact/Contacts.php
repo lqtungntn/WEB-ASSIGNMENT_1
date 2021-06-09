@@ -12,8 +12,19 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  
     </head>
     <?php
-      include 'connection.php';
-
+ // Create connection
+ $servername = "localhost";
+ $username = "root";
+ $password = "";
+ $dbname = "mercedes";
+ 
+ // Create connection
+ $conn = new mysqli($servername, $username, $password, $dbname);
+ mysqli_set_charset($conn,"utf8");
+ // Check connection
+ if ($conn->connect_error) {
+   die("Connection failed: " . $conn->connect_error);
+ }
       $sql = "SELECT PhoneNum, Address, Email, Facebook, Twitter, Reddit, Youtube, Instagram, Telegram FROM contact";
       mysqli_set_charset($conn, "utf8");
       $result = mysqli_query($conn, $sql);
@@ -32,24 +43,6 @@
       }
     ?>
     <body>
-      <?php 
-       $servername = "localhost";
-       $username = "root";
-       $password = "";
-       $dbname = "mercedes";
-
-       // Create connection
-       $conn = new mysqli($servername, $username, $password, $dbname);
-       mysqli_set_charset($conn,"utf8");
-       // Check connection
-       if ($conn->connect_error) {
-       die("Connection failed: " . $conn->connect_error);
-       }
-
-       $sql = "SELECT * FROM contact";
-       $result = $conn->query($sql);
-       $contact = $result->fetch_assoc();
-      ?>
         <!-- Header -->
         <div class="header-background">
         <div id="nav" class="sticky-nav">
