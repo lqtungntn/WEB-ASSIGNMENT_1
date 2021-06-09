@@ -85,7 +85,7 @@ if($nameErr== "" && $imageErr== ""&& $priceErr== ""&& $detailErr== ""&& $operate
 <?php } ?>
 <?php if($nameErr!== "" || $imageErr!== "" || $priceErr!== "" || $detailErr!== "" || $operateErr!== "") {?>
 <tr class= "error" class="table-row">
-<td><?php echo "Hello"; ?></td>
+<td></td>
 <td><?php echo $nameErr; ?></td>
 <td><?php echo $imageErr; ?></td>
 <td><?php echo $priceErr; ?></td>

@@ -19,8 +19,8 @@ if($_POST["column"] =="Fullname") {
         $err = "Name is required";
       } else {
         $name = $_POST["editval"];
-        if (strlen($name)<5 || strlen($name)>40) {
-          $err = "just from 5 to 40 characters";
+        if (strlen($name)>40) {
+          $err = "Name has less than 40 charaters";
         }
       }
 }
@@ -69,7 +69,7 @@ if($_POST["column"] =="Operate") {
     }
 }
 
-if(1){
+if($err=""){
 $sql = "UPDATE product set " . $_POST["column"] . " = '".$_POST["editval"]."' WHERE  ID=".$_POST["id"];
 $result = $db_handle->executeUpdate($sql);}
 ?>
