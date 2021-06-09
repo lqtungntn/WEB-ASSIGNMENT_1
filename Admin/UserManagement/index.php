@@ -230,6 +230,6 @@ function deleteRecord(id) {
 </table>
 <div class="ajax-action-button" id="add-more" onClick="createNew();">Add More</div>
 </div>
-<script src="./index.js"></script>
+<!-- <script src="./index.js"></script> -->
 </body>
 </html>
