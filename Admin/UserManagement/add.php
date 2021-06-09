@@ -93,14 +93,9 @@ if($nameErr== "" && $phoneNumErr== "" && $emailErr=="" && $usernameErr=="" && $p
 </tr>  
 <?php } ?>
 
-<<<<<<< Updated upstream
 <?php if($nameErr!== "" || $phoneNumErr!== "" || $emailErr!=="" || $usernameErr!=="" && $passwordErr!=="") { ?>
 <tr class="error">
 <td></td>
-=======
-<tr class= "error" class="table-row" id="table-row-<?php echo $user[0]["ID"]; ?>">
-<td><?php echo "Hello"; ?></td>
->>>>>>> Stashed changes
 <td><?php echo $nameErr; ?></td>
 <td><?php echo $phoneNumErr; ?></td>
 <td><?php echo $emailErr; ?></td>
