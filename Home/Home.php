@@ -58,7 +58,7 @@ session_start();
             </ul>
           </div>
             <a href="../account/index.php" class="nav-link" aria-current="page">
-              <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo "Trang cá nhân";
+              <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo $_SESSION['name'];
                     else echo "Đăng nhập"; ?>
             </a>
           <div class="logo"><img class="logo" src="../image/logo.png" alt=""></div>

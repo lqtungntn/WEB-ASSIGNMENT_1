@@ -34,7 +34,7 @@ session_start();
                     <a class="dropdown-item" aria-current="page" href="../Price/Pricea200.php">Bảng giá</a>
                     <a href="../Contact/Contacts.php" class="dropdown-item" aria-current="page">Liên hệ</a>
                     <a class="dropdown-item" href="../account/index.php" class="nav-link" aria-current="page">
-                      <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo "Trang cá nhân";
+                      <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo $_SESSION['name'];
                             else echo "Đăng nhập"; ?>
                     </a>
                   </div>
@@ -57,15 +57,13 @@ session_start();
                       <a href="../Contact/Contacts.php" class="nav-link active" aria-current="page">Liên hệ</a>
                     </li>
                     <li class="nav-item">
-                    <a href="../account/index.php" class="nav-link" aria-current="page">
-                      <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo "Trang cá nhân";
-                            else echo "Đăng nhập"; ?>
-                    </a>                    </li>
-                    
                   </ul>
                 </div>
-                <!--<div class="logo"><img class="logo" src="../image/logo.png" alt=""></div>-->
-              </div>
+                <a href="../account/index.php" class="nav-link" aria-current="page">
+                      <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo $_SESSION['name'];
+                            else echo "Đăng nhập"; ?>
+                    </a>                    </li>
+                    <div class="logo"><img class="logo" src="../image/logo.png" alt=""></div>              </div>
             </nav>
           </div>
           </div>

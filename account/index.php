@@ -40,7 +40,7 @@ elseif ($_SESSION["is_login"] == false)
                 <a class="dropdown-item" aria-current="page" href="../Price/Pricea200.php">Bảng giá</a>
                 <a href="../Contact/Contacts.php" class="dropdown-item" aria-current="page">Liên hệ</a>
                 <a class="dropdown-item" href="../account/index.php" class="nav-link" aria-current="page">
-                  <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo "Trang cá nhân";
+                  <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo $_SESSION['name'];
                         else echo "Đăng nhập"; ?>
                 </a>
                 </div>
@@ -65,7 +65,7 @@ elseif ($_SESSION["is_login"] == false)
                 </ul>
             </div>
             <a href="../account/index.php" class="nav-link" aria-current="page">
-              <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo "Trang cá nhân";
+              <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo $_SESSION['name'];
                     else echo "Đăng nhập"; ?>
             </a>
             <div class="logo"><img class="logo" src="../image/logo.png" alt=""></div>
