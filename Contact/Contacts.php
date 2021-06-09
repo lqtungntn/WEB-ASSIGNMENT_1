@@ -165,8 +165,6 @@
                             <li><a href="<?php for ($i = 0; $i < sizeof($Facebook); $i++) echo $Facebook[$i]; ?>"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
                             <li><a href="<?php for ($i = 0; $i < sizeof($Twitter); $i++) echo $Twitter[$i]; ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                             <li><a href="<?php for ($i = 0; $i < sizeof($Instagram); $i++) echo $Instagram[$i]; ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href="<?php for ($i = 0; $i < sizeof($Reddit); $i++) echo $Reddit[$i]; ?>"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
-                            <li><a href="<?php for ($i = 0; $i < sizeof($Telegram); $i++) echo $Telegram[$i]; ?>"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
                             <li><a href="<?php for ($i = 0; $i < sizeof($Youtube); $i++) echo $Youtube[$i]; ?>"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
                             <li><a href=""><p class="text">Follow</p></a></li>
                         </ul>
