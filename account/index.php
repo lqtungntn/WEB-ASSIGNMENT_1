@@ -86,6 +86,8 @@ elseif ($_SESSION["is_login"] == false)
                 </ul>
                 <a href="./edit.php">Sửa thông tin</a>
                 <a style="color:red" href="../login/logout.php">Thoát</a>
+                <!-- if( $_SESSION["tk"]=="admin") {header("Location: http://localhost/WEB-ASSIGNMENT_1/Admin/UserManagement/index.php");} -->
+                <?php if( $_SESSION["tk"]=="admin") echo '<a style="color:red" href="http://localhost/WEB-ASSIGNMENT_1/Admin/UserManagement/index.php">Tới trang quản trị</a>' ?>
             </div>
             <div class="col-md-4"></div>
         </div>

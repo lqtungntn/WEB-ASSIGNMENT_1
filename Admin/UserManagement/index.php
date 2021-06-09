@@ -190,7 +190,10 @@ function deleteRecord(id) {
 }
 </script>
 <ul>
-  <li>Admin</li>
+  <li><a href="../../account/index.php" class="nav-link" aria-current="page">
+              <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo "Admin";
+                    else echo "Đăng nhập"; ?>
+            </a></li>
   <li><a class="active" href="">User Management</a></li>
   <li><a href="../ProductManagement/index.php">Product Management</a></li>
   <li><a href="../Contact/index.php">Contact Info</a></li>
